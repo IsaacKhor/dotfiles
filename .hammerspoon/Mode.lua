@@ -74,7 +74,7 @@ end
 -- * msg: description of the binding
 -- * alert: if true, msg will be shown on trigger of the command
 -- * func: the function executed on trigger of command
-function Mode:bind(mod, key, msg, alert, func)
+function Mode:bind(mod, key, msg, alert, pressFunc, releaseFunc, repeatFunc)
 	table.insert(
 		self.keybindings, 
 		{mod = mod,
@@ -84,24 +84,53 @@ function Mode:bind(mod, key, msg, alert, func)
 		func = func}
 	)
 
-	local disp = nil
 	local realFunc = func
 
-	if alert then disp = msg end
-	if self.display then
-		realFunc = function()
-		self:showCommands(false)
-			func()
-			self.hsmode:exit() 
+	local function wrapFunc(fn)
+		-- If it was nil, neturn nothing to make sure that 
+		-- hammerspoon doesn't get confused
+
+		if not fn then
+			return nil
 		end
-	else
-		realFunc = function()
-			self:showCommands(false)
-			func()
+
+		if alert then
+			return function()
+				self:showCommands(false)
+				fn()
+				self:exit()
+			end
+		else
+			return function()
+				self:showCommands(false)
+				fn()
+			end
 		end
 	end
 
-	self.hsmode:bind(mod, key, disp, realFunc, nil, nil)
+	local wPressFn = wrapFunc(pressFunc)
+	local wRelFn = wrapFunc(releaseFunc)
+	-- Don't need to wrap repeat func
+	local wRepFn = repeatFunc
+
+	-- Workaround: if 3rd param is nil, it will be interpreted as missing pressedFn
+	-- source: https://github.com/Hammerspoon/hammerspoon/blob/master/extensions/hotkey/init.lua
+	if alert then
+		self.hsmode:bind(mod, key, msg, wPressFn, wRelFn, wRepFn)
+	else
+		self.hsmode:bind(mod, key, wPressFn, wRelFn, wRepFn)
+	end
+end
+
+function Mode:bindKeyOnly(key, msg, func, rep)
+	local realRepFn = nil
+	local rep = rep or false
+
+	if rep then
+		realRepFn = func
+	end
+
+	self:bind("", key, key .. ": " .. msg, false, func, nil, realRepFn)
 end
 
 function Mode:addDefaultsToMode()
@@ -128,10 +157,6 @@ function Mode:addDefaultsToMode()
 		--hs.alert("EXIT: " .. mode.name, 0.5)
 		mode:showCommands(false)
 	end
-end
-
-function Mode:bindKeyOnly(key, msg, func)
-	self:bind("", key, key .. ": " .. msg, false, func)
 end
 
 function Mode:enter() self.hsmode:enter() end

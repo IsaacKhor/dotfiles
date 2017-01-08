@@ -22,7 +22,7 @@ local function nextWord() emitKey("alt", "Right") end
 local function prevWord() emitKey("alt", "Left") end
 
 local function bind(key, desc, f)
-	normalMode:bindKeyOnly(key, desc, f)
+	normalMode:bindKeyOnly(key, desc, f, true)
 end
 
 function mod.init()
