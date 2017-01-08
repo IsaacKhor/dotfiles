@@ -138,7 +138,15 @@ function Mode:addDefaultsToMode()
 
 	self:bindKeyOnly("q", "Exit mode", function() hsmode:exit() end)
 	--mode:bindKeyOnly("escape", "Exit mode", function() hsmode:exit() end)
-	self:bindKeyOnly("tab", "Show commands", function() self:showCommands(true) end)
+	local function toggleShowCommands()
+		if self.hotkeytext then
+			showCommands(false)
+		else
+			showCommands(true)
+		end
+	end
+
+	self:bindKeyOnly("tab", "Show commands", toggleShowCommands)
 
 	local mode = self
 	function hsmode:entered()
