@@ -95,7 +95,8 @@ function Mode:bind(mod, key, msg, alert, pressFunc, releaseFunc, repeatFunc)
 			return nil
 		end
 
-		if alert then
+		-- If display is true, exit after command
+		if self.display then
 			return function()
 				self:showCommands(false)
 				fn()
