@@ -57,11 +57,12 @@ function Mode.new(name, enterKey, options)
 end
 
 function Mode.setActiveMode(active)
-	-- for _,mode in pairs(Mode.modes) do
-	-- 	if active ~= mode then
-	-- 		mode:exit()
-	-- 	end
-	-- end
+	-- Exit all other modes
+	for _,mode in pairs(Mode.modes) do
+		if active ~= mode then
+			mode:exit()
+		end
+	end
 
 	activeMode = mode
 end
