@@ -28,6 +28,7 @@ local plugins = {
     {"modes.vim", {}},
     {"modes.hammerspoon", {}},
     {"modes.system", {}},
+    {"modes.window", {}},
 
     -- Utilities    
     {"util.window-hints", {}},
