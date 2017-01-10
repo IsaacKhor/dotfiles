@@ -50,11 +50,22 @@ local function rightHalf(max, f)
 	return f
 end
 
+local function fillScreen(max, f)
+	f.x = max.x
+	f.y = max.y
+	f.w = max.w
+	f.h = max.h
+	return f
+end
+
 function mod.init()
 	modeWindow = Mode.new("Window management", mod.config.key, {global = false, display = true})
 
 	local m = modeWindow
+
 	m:bindKeyOnly('c', "Centre window", getWinFunc(centreWindow), false)
+	m:bindKeyOnly('f', "Fill screen", getWinFunc(fillScreen))
+
 	bindMod('shift', 'h', "Left half", getWinFunc(leftHalf))
 	bindMod('shift', 's', "Right half", getWinFunc(rightHalf))
 end
