@@ -1,12 +1,12 @@
 local mod = {}
 mod.config = {
-	keyToggle = {"ctrl", "m"}
+	keyMode = {"ctrl", "m"}
 }
 
 local modeMaster
 
 function mod.init()
-	modeMaster = Mode.new("Master", mod.config.keyToggle, {global = true, display = true})
+	modeMaster = Mode.new("Master", mod.config.keyMode, {global = true, display = true})
 
 	for _,mode in pairs(Mode.modes) do
 		mod.registerMode(mode)

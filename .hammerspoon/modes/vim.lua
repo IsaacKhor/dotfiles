@@ -7,7 +7,7 @@ require("Mode")
 
 local mod = {}
 mod.config = {
-	shortcutNormal = {"ctrl", "v"}
+	keyMode = {"ctrl", "v"}
 }
 
 local normalMode
@@ -36,7 +36,7 @@ local function bindMod(mod, key, desc, f)
 end
 
 function mod.init()
-	normalMode = Mode.new("Normal mode", mod.config.shortcutNormal, {global = true, display = false})
+	normalMode = Mode.new("Normal mode", mod.config.keyMode, {global = true, display = false})
 
 	bind('h', "Left", left)
 	bind('t', "Down", down)
