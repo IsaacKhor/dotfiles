@@ -2,13 +2,20 @@
 
 local mod = {}
 mod.config = {
-	key = {"", "w"}
+	keyMode = {"", "w"}
 }
 
 local modeWindow
 
+local modToSym = {
+	shift = '⇧',
+	ctrl = '⌃',
+	alt = '⌥',
+	cmd = '⌘',
+}
+
 local function bindMod(mod, key, desc, f)
-	local msg = mod .. "+" .. key .. ": " .. desc
+	local msg = modToSym[mod] .. key .. ": " .. desc
 	modeWindow:bind(mod, key, msg, false, nil, f, nil)
 end
 
@@ -50,6 +57,11 @@ local function rightHalf(max, f)
 	return f
 end
 
+local function centreXOnly(max, f)
+	f.x = (max.w / 2) - (f.w / 2)
+	return f
+end
+
 local function fillScreen(max, f)
 	f.x = max.x
 	f.y = max.y
@@ -59,7 +71,7 @@ local function fillScreen(max, f)
 end
 
 function mod.init()
-	modeWindow = Mode.new("Window management", mod.config.key, {global = false, display = true})
+	modeWindow = Mode.new("Window management", mod.config.keyMode, {global = false, display = true})
 
 	local m = modeWindow
 
@@ -68,6 +80,8 @@ function mod.init()
 
 	bindMod('shift', 'h', "Left half", getWinFunc(leftHalf))
 	bindMod('shift', 's', "Right half", getWinFunc(rightHalf))
+
+	bindMod('shift', 'c', "Centre X Only", getWinFunc(centreXOnly))
 end
 
 return mod
