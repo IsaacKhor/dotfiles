@@ -10,7 +10,7 @@
                         "product_id": 610,
                         "vendor_id": 1452
                     },
-                    "ignore": true
+                    "ignore": false
                 }
             ],
             "fn_function_keys": {
@@ -49,9 +49,7 @@
                 "j": "h",
                 "k": "t",
                 "l": "n",
-                "left_command": "left_option",
                 "left_control": "f18",
-                "left_option": "left_command",
                 "m": "m",
                 "n": "b",
                 "o": "r",
@@ -61,8 +59,6 @@
                 "q": "quote",
                 "quote": "hyphen",
                 "r": "p",
-                "right_command": "right_option",
-                "right_option": "right_command",
                 "s": "o",
                 "semicolon": "s",
                 "slash": "z",
