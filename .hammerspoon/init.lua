@@ -1,5 +1,7 @@
 package.path = package.path .. ';plugins/?.lua'
 
+require("hs.ipc")
+
 --
 -- Global variables
 --
@@ -33,6 +35,12 @@ local plugins = {
     -- Utilities    
     {"util.window-hints", {}},
     {"util.cheatsheet", {}},
+    {"util.switcher", {}},
+
+    -- Command line
+    {"command-line.command-line-master", {}},
+    {"command-line.karabiner-switcher", {}},
+    {"command-line.misc-commands", {}}
 }
 
 local function loadPlugin(plugin, config)
@@ -91,8 +99,6 @@ function emitKey(mod, key)
     hs.eventtap.keyStroke(mod, key, 1000)
 end
 
-loadPlugins(plugins)
-
 --
 -- Keybindings
 --
@@ -104,5 +110,7 @@ hs.hotkey.bind("ctrl", "n", function() emitKey("ctrl,shift", "tab") end)
 --
 -- Everything successful
 --
+
+loadPlugins(plugins)
 
 notify("Hammerspoon", "Config loaded successfully")

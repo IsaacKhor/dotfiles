@@ -1,0 +1,385 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sidebar",
+				"sidebar-select"
+			],
+			[
+				"prev",
+				"prevWindow"
+			],
+			[
+				"showCo",
+				"showCommands"
+			],
+			[
+				"enter",
+				"enterKey"
+			],
+			[
+				"showC",
+				"showCommands"
+			],
+			[
+				"showCom",
+				"showCommandsMode"
+			],
+			[
+				"show",
+				"showCommandsActive"
+			],
+			[
+				"register",
+				"registerWithModeManager"
+			],
+			[
+				"default",
+				"defaultStyle"
+			],
+			[
+				"exi",
+				"exitMode"
+			],
+			[
+				"sho",
+				"shortcutShowAvailableHotkeys"
+			],
+			[
+				"modalmgr",
+				"modalmgrKeys"
+			],
+			[
+				"loadPlu",
+				"loadPlugin"
+			],
+			[
+				"activeA",
+				"activeAppKey"
+			],
+			[
+				"allW",
+				"allWinKey"
+			],
+			[
+				"moduel",
+				"module_list"
+			],
+			[
+				"active",
+				"activeAppHints"
+			],
+			[
+				"all",
+				"allWindows"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "packa",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/clarenceclark/Documents/code/project-factual",
+		"/Users/clarenceclark/Documents/code/project-factual/src",
+		"/Users/clarenceclark/Documents/code/project-factual/src/cljs",
+		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual",
+		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/views"
+	],
+	"file_history":
+	[
+		"/Users/clarenceclark/Documents/code/project-factual/resources/css/theme-light.scss",
+		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/views/sidebar.cljs",
+		"/Users/clarenceclark/.hammerspoon/util/cheatsheet.lua",
+		"/Users/clarenceclark/.hammerspoon/modes/hammerspoon.lua",
+		"/Users/clarenceclark/.hammerspoon/modes/vim.lua",
+		"/Users/clarenceclark/.hammerspoon/modes/system.lua",
+		"/Users/clarenceclark/.hammerspoon/modes/master.lua",
+		"/Users/clarenceclark/.hammerspoon/Mode.lua",
+		"/Users/clarenceclark/.hammerspoon/init.lua",
+		"/Users/clarenceclark/.hammerspoon/mode-system.lua",
+		"/Users/clarenceclark/.hammerspoon/mode-vim.lua",
+		"/Users/clarenceclark/.hammerspoon/mode-hammerspoon.lua",
+		"/Users/clarenceclark/.hammerspoon/mode-manager.lua",
+		"/Users/clarenceclark/.hammerspoon/util/config-reload.lua",
+		"/Users/clarenceclark/.hammerspoon/util/misc-keybindings.lua",
+		"/Users/clarenceclark/.hammerspoon/mode-mgr.lua",
+		"/Users/clarenceclark/.hammerspoon/util/window-hints.lua",
+		"/Users/clarenceclark/.hammerspoon/lib/modal-lib.lua",
+		"/Users/clarenceclark/.hammerspoon/modes/modal-manager.lua",
+		"/Users/clarenceclark/.hammerspoon/modes/timer.lua",
+		"/Users/clarenceclark/.hammerspoon/plugins/window-manip.lua",
+		"/Users/clarenceclark/.hammerspoon/lib/oh-my-hammerspoon.lua",
+		"/Users/clarenceclark/.hammerspoon/modes/oh-my-hammerspoon.lua",
+		"/Users/clarenceclark/.hammerspoon/lib/plugin.lua",
+		"/Users/clarenceclark/.hammerspoon/lib/omh-lib.lua",
+		"/Users/clarenceclark/.hammerspoon/modal-lib.lua",
+		"/Users/clarenceclark/.hammerspoon/timer.lua",
+		"/Users/clarenceclark/.hammerspoon/widgets/netspeed.lua",
+		"/Users/clarenceclark/.hammerspoon/vim-arrows.lua",
+		"/Users/clarenceclark/.karabiner.d/karabiner.json",
+		"/Users/clarenceclark/.karabiner.d/configuration/karabiner.json",
+		"/Users/clarenceclark/Documents/code/electron-and-clojurescript/boot.properties",
+		"/Users/clarenceclark/.boot/boot.properties",
+		"/Users/clarenceclark/Library/Application Support/Abricotine/app/config.json",
+		"/Users/clarenceclark/Documents/blog-source/static/css/custom.css",
+		"/Users/clarenceclark/Documents/blog-source/layouts/partials/html-header.html",
+		"/Users/clarenceclark/Documents/blog-source/layouts/_default/single.html",
+		"/Users/clarenceclark/Documents/blog-source/layouts/partials/footer.html",
+		"/Users/clarenceclark/Documents/code/abricotine/app/renderer/abr-document.js",
+		"/Users/clarenceclark/Documents/code/abricotine/app/renderer/cm-init.js",
+		"/Users/clarenceclark/Documents/code/abricotine/app/renderer/cm-extend-autopreview.js",
+		"/Users/clarenceclark/Documents/code/abricotine/app/less/editor.less",
+		"/Users/clarenceclark/Downloads/source-sans-pro-2.020R-ro-1.075R-it/source-sans-pro.css",
+		"/Applications/Abricotine.app/Contents/Resources/app.asar.unpacked/default/templates/default/assets/styles.css",
+		"/Users/clarenceclark/Downloads/A History of the World in 6 Glasses/OEBPS/chap_historyw_9780802718594_epub.css",
+		"/Users/clarenceclark/Downloads/A History of the World in 6 Glasses/OEBPS/page-template.xpgt",
+		"/Users/clarenceclark/Downloads/A History of the World in 6 Glasses/OEBPS/toc.ncx",
+		"/Users/clarenceclark/Downloads/A History of the World in 6 Glasses/OEBPS/content.opf",
+		"/Users/clarenceclark/Downloads/A History of the World in 6 Glasses/META-INF/container.xml",
+		"/Users/clarenceclark/Documents/code/simplemde-markdown-editor/src/js/simplemde.js",
+		"/Users/clarenceclark/Documents/code/re-frame/examples/todomvc/src/todomvc/db.cljs",
+		"/Users/clarenceclark/home/code/re-frame/examples/todomvc/src/todomvc/views.cljs",
+		"/Users/clarenceclark/home/code/re-frame/examples/todomvc/src/todomvc/subs.cljs",
+		"/Users/clarenceclark/home/code/re-frame/examples/todomvc/src/todomvc/events.cljs",
+		"/Users/clarenceclark/home/code/re-frame/examples/todomvc/src/todomvc/core.cljs",
+		"/Users/clarenceclark/home/code/re-frame/examples/todomvc/src/todomvc/db.cljs",
+		"/Users/clarenceclark/home/code/re-frame/project.clj",
+		"/Users/clarenceclark/.wine/drive_c/Program Files/Factorio/data/base/info.json",
+		"/Users/clarenceclark/.wine/drive_c/Program Files/Factorio/data/base/data.lua",
+		"/Applications/Abricotine.app/Contents/Resources/app.asar.unpacked/default/templates/default/template.html",
+		"/Applications/Abricotine.app/Contents/Resources/app.asar.unpacked/default/templates/garamond/assets/styles.css",
+		"/Users/clarenceclark/Google Drive/sch/en_the-crisis-questions.md",
+		"/Users/clarenceclark/home/blog/static/css/custom.css",
+		"/Users/clarenceclark/home/blog/config.toml",
+		"/Users/clarenceclark/home/blog/content/about.md",
+		"/Users/clarenceclark/home/blog/content/contact.md",
+		"/Users/clarenceclark/home/blog/content/license.md",
+		"/Users/clarenceclark/home/blog/content/blog/test-post-2.md",
+		"/Users/clarenceclark/home/blog/content/blog/test-post.md",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/archetypes/default.md",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/layouts/_default/list.html",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/layouts/_default/single.html",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/layouts/partials/page-header.html",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/layouts/partials/footer.html",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/layouts/partials/html-header.html",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/static/css/custom.css",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/LICENSE.md",
+		"/Users/clarenceclark/home/blog/themes/aa-minimalist/theme.toml",
+		"/Users/clarenceclark/home/blog/themes/hugo-zen/layouts/index.html",
+		"/Users/clarenceclark/home/blog/themes/hugo-zen/archetypes/default.md",
+		"/Users/clarenceclark/home/links/tmpmodstorage/RT_QuantumStorage-A14-1.0.4/Source/CompProperties_RTQuantumRelay.cs",
+		"/Applications/RimWorld1249Mac.app/Mods/Core/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Users/clarenceclark/code/project-test/env/dev/cljs/project_test/dev.cljs",
+		"/Users/clarenceclark/code/project-factual/README.md",
+		"/Users/clarenceclark/code/project-factual/project.clj",
+		"/Users/clarenceclark/code/re-frame/circle.yml",
+		"/Users/clarenceclark/Downloads/solarized/iterm2-colors-solarized/README.md",
+		"/Users/clarenceclark/Downloads/solarized/apple-colorpalette-solarized/README.md",
+		"/Users/clarenceclark/Library/Application Support/Karabiner/private.xml",
+		"/Users/clarenceclark/code/project-odin/project-odin.iml",
+		"/Users/clarenceclark/code/project-odin/package.json",
+		"/Users/clarenceclark/code/project-odin/Gruntfile.js",
+		"/Users/clarenceclark/code/fe-test/project.clj",
+		"/Users/clarenceclark/code/mies-test/project.clj",
+		"/Users/clarenceclark/code/cljstest/project.clj",
+		"/Users/clarenceclark/code/project-odin/project.clj",
+		"/Users/clarenceclark/Library/Application Support/Prison Architect/saves/Experiment 1.prison",
+		"/Users/clarenceclark/.bash_profile",
+		"/Users/clarenceclark/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/clarenceclark/Google Drive/sch/projects/extemp15-16/bbc-archive/'30,000' victims of violence over 60.html",
+		"/Users/clarenceclark/Google Drive/sch/extemp15-16/bbc-archive/'30,000' victims of violence over 60.html",
+		"/Users/clarenceclark/home/code/fpinscala/answers/src/main/scala/fpinscala/state/State.scala",
+		"/Users/clarenceclark/Google Drive/00_unsync/extemp15-16/bbc-archive/'30,000' victims of violence over 60.html",
+		"/Users/clarenceclark/Google Drive/00_unsync/extemp15-16/bbc-archive/'Thousands to be stuck on lowest pay'.html",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/state/10.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/laziness/11.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/laziness/09.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/state/11.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/state/09.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/state/08.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/state/07.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/state/01.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/errorhandling/01.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/state/02.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/datastructures/29.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/datastructures/27.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/datastructures/25.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/datastructures/28.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/datastructures/13.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/datastructures/12.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/datastructures/10.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/errorhandling/02.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/README.md",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/gettingstarted/04.answer.scala",
+		"/Users/clarenceclark/Programming/fpinscala/answerkey/errorhandling/04.answer.scala",
+		"/Users/clarenceclark/Downloads/nature11153.ris"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hotkey_filtered",
+			"AXTitle",
+			"modal_stat",
+			"newlineAndIndent",
+			": ",
+			"StandingLamp"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"keybindings",
+			" = "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "project-factual.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
