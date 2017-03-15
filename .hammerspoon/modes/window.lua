@@ -79,8 +79,8 @@ function mod.init()
 	bindMod('shift', 's', "Right half", getWinFunc(rightHalf))
 	m:bindKeyOnly('f', "Fill screen", getWinFunc(fillScreen))
 
-	m:bindKeyOnly('c', "Centre x only", getWinFunc(centreXOnly))
-	bindMod('shift', 'c', "Centre window", getWinFunc(centreWindow))
+	m:bindKeyOnly('c', "Centre window", getWinFunc(centreWindow))
+	bindMod('shift', 'c', "Centre x only", getWinFunc(centreXOnly))
 end
 
 return mod

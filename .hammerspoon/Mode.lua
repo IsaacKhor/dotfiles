@@ -139,7 +139,8 @@ function Mode:addDefaultsToMode()
 	local hsmode = self.hsmode
 
 	self:bindKeyOnly("q", "Exit mode", function() hsmode:exit() end)
-	--mode:bindKeyOnly("escape", "Exit mode", function() hsmode:exit() end)
+	self:bindKeyOnly("escape", "Exit mode", function() hsmode:exit() end)
+	
 	local function toggleShowCommands()
 		if self.hotkeytext then
 			showCommands(false)

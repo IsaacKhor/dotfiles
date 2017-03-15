@@ -79,6 +79,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/editor/spellcheck.cljs",
+			"settings":
+			{
+				"buffer_size": 1071,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -121,6 +129,9 @@
 		"/Users/clarenceclark/Documents/code/project-factual/src",
 		"/Users/clarenceclark/Documents/code/project-factual/src/cljs",
 		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual",
+		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/editor",
+		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/handler",
+		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/main",
 		"/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/views"
 	],
 	"file_history":
@@ -295,8 +306,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/clarenceclark/Documents/code/project-factual/src/cljs/project_factual/editor/spellcheck.cljs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1071,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								638,
+								638
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Clojure/Clojure.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
