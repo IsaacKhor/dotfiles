@@ -40,7 +40,8 @@ local plugins = {
     -- Command line
     {"command-line.command-line-master", {}},
     {"command-line.karabiner-switcher", {}},
-    {"command-line.misc-commands", {}}
+    {"command-line.misc-commands", {}},
+    {"command-line.key-reset", {}},
 }
 
 local function loadPlugin(plugin, config)
