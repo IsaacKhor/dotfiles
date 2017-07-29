@@ -1,3 +1,1 @@
-function fish_prompt
-	echo -n (prompt_pwd)'$ '
-end
+/Users/clarenceclark/.local/share/omf/themes/bobthefish/fish_prompt.fish
