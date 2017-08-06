@@ -13,7 +13,7 @@ local masterMode = require("modes.master")
 
 local mod = {}
 mod.config = {
-  cheatsheetKey = {"⌃", "z"},
+  cheatsheetKey = {"⌃", ";"},
   width = 1080,
   height = 800,
   devExtras = false,
