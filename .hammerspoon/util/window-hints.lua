@@ -7,9 +7,11 @@ mod.config = {
 	-- Shortcut for all windows hint
 	allWinKey = { "⌃", "d" },
 	-- Shortcut for hint for active app only
-	activeAppKey = { "⌃", "b" },
+	activeAppKey = { "⌃⇧", "d" },
 	-- Hints style
-	style = "vimperator",
+	-- use 'vimperator' if you want the hint char to be the
+	-- first letter of the window title
+	style = "default",
 }
 
 -- Show window hints for the active application
@@ -20,6 +22,13 @@ end
 
 function mod.init()
 	hs.hints.style = mod.config.style
+
+	-- Never show window title
+	hs.hints.showTitleThresh = 6
+
+	-- Must use fully-qualified name of the font according to the docs
+	hs.hints.fontName = "Inconsolata-Regular"
+	hs.hints.fontSize = 24
 
 	-- Show window hints for all windows
 	bind(mod.config.allWinKey, hs.hints.windowHints)
