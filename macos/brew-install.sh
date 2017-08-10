@@ -13,7 +13,7 @@ brew upgrade
 # Install all the brew packages
 
 brew install lua scala leiningen testdisk boot-clj brew-graph git-flow wget dnscrypt-proxy hugo fish rsync coreutils findutils
-brew cask install 1password hammerspoon monolingual tunnelblick android-platform-tools java musescore vlc caffeine launchbar transmission the-unarchiver suspicious-package app-cleaner firefox karabiner-elements macdown veracrypt
+brew cask install 1password hammerspoon monolingual tunnelblick android-platform-tools java musescore vlc caffeine launchbar transmission the-unarchiver suspicious-package app-cleaner firefox karabiner-elements macdown veracrypt google-chrome
 
 brew cleanup
 brew cask cleanup

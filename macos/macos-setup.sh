@@ -23,6 +23,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 . ./settings-system.sh
 . ./settings-term.sh
 
+. ./brew-install.sh
+
 
 ###############################################################################
 # Kill affected applications                                                  #
