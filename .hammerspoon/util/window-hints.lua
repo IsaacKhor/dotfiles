@@ -23,8 +23,9 @@ end
 function mod.init()
 	hs.hints.style = mod.config.style
 
-	-- Never show window title
-	hs.hints.showTitleThresh = 6
+	-- Show window titles if there are less than x windows
+	-- 0 to disable
+	hs.hints.showTitleThresh = 4
 
 	-- Must use fully-qualified name of the font according to the docs
 	hs.hints.fontName = "Inconsolata-Regular"
