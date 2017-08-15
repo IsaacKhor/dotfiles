@@ -23,6 +23,7 @@ hs.alert.defaultStyle.radius = 12
 
 local plugins = {
     {"util.config-reload", {}},
+    {"ff-tab-switch", {}},
 
     -- Modes
     {"Mode", {}},
@@ -32,7 +33,7 @@ local plugins = {
     {"modes.system", {}},
     {"modes.window", {}},
 
-    -- Utilities    
+    -- Utilities
     {"util.window-hints", {}},
     {"util.cheatsheet", {}},
     {"util.switcher", {}},
@@ -99,14 +100,6 @@ end
 function emitKey(mod, key)
     hs.eventtap.keyStroke(mod, key, 1000)
 end
-
---
--- Keybindings
---
-
-hs.hotkey.bind("ctrl", "s", function() emitKey("ctrl", "tab") end)
-hs.hotkey.bind("ctrl", "n", function() emitKey("ctrl,shift", "tab") end)
-
 
 --
 -- Everything successful
