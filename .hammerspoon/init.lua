@@ -1,4 +1,4 @@
-package.path = package.path .. ';plugins/?.lua'
+package.path = package.path .. ';plugins/?.lua' .. '/usr/local/lib/lua/5.2/'
 
 require("hs.ipc")
 
