@@ -103,3 +103,4 @@ if begin; status --is-interactive; and not functions -q -- iterm2_status; and [ 
   iterm2_precmd
   printf "\033]1337;ShellIntegrationVersion=5;shell=fish\007"
 end
+alias imgcat=~/.iterm2/imgcat; alias it2dl=~/.iterm2/it2dl
