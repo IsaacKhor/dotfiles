@@ -90,3 +90,4 @@
 (bind-key "M-x" #'helm-M-x)
 (bind-key "C-x b" #'helm-mini)
 (bind-key "C-x C-f" #'helm-find-files)
+(bind-key "C-c C-m" #'magit-status)
