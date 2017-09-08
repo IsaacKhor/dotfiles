@@ -15,13 +15,12 @@
  '(custom-safe-themes
    (quote
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+ '(debug-on-error t)
  '(default-frame-alist (quote ((height . 60) (width . 115))))
- '(electric-indent-mode t)
  '(electric-pair-mode t)
  '(fci-rule-color "dark gray")
  '(fci-rule-column 80)
- '(helm-mode t)
- '(icicle-mode t)
+ '(helm-mode nil)
  '(ido-mode nil nil (ido))
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
@@ -38,11 +37,11 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (bind-key rainbow-delimiters rainbow-mode helm helm-cider helm-css-scss fill-column-indicator all-the-icons-dired all-the-icons-gnus all-the-icons-ivy all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode luarocks brainfuck-mode bookmark+ org parinfer color-theme-sanityinc-solarized color-theme auto-complete cider)))
+    (smart-mode-line ac-slime ac-cider slime helm-projectile bind-key rainbow-delimiters rainbow-mode helm helm-cider helm-css-scss fill-column-indicator all-the-icons-dired all-the-icons-gnus all-the-icons-ivy all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode luarocks brainfuck-mode bookmark+ org parinfer color-theme-sanityinc-solarized color-theme auto-complete cider)))
  '(recentf-max-menu-items 100)
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
- '(rm-blacklist (quote (" Helm")))
+ '(rm-blacklist (quote (" Helm" " ICY")))
  '(scroll-bar-mode nil)
  '(sml/replacer-regexp-list
    (quote

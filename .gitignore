@@ -3,3 +3,5 @@
 .emacs.d/elpa/
 .emacs.d/recentf*
 .emacs.d/network-security.data
+.emacs.d/ac*
+*~
