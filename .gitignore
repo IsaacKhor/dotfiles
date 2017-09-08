@@ -1,1 +1,5 @@
 .DS_Store
+.emacs.d/autosave-list/
+.emacs.d/elpa/
+.emacs.d/recentf*
+.emacs.d/network-security.data
