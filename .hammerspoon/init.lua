@@ -23,26 +23,17 @@ hs.alert.defaultStyle.radius = 12
 
 local plugins = {
     {"util.config-reload", {}},
-    {"ff-tab-switch", {}},
 
     -- Modes
     {"Mode", {}},
     {"modes.master", {}},
-    {"modes.vim", {}},
-    {"modes.hammerspoon", {}},
     {"modes.system", {}},
     {"modes.window", {}},
 
     -- Utilities
-    {"util.window-hints", {}},
+    {"util.ff-tab-switch", {}},
     {"util.cheatsheet", {}},
-    {"util.switcher", {}},
-
-    -- Command line
-    {"command-line.command-line-master", {}},
-    {"command-line.karabiner-switcher", {}},
-    {"command-line.misc-commands", {}},
-    {"command-line.key-reset", {}},
+    {"util.window-hints", {}},
 }
 
 local function loadPlugin(plugin, config)
