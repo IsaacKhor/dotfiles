@@ -60,8 +60,6 @@
      ("^~/Documents/" ":Doc:")
      ("^~/Documents/code/" ":code:"))))
  '(standard-indent 2)
- '(sublimity-scroll-weight 4.0)
- '(tabbar-mode nil nil (tabbar))
  '(tabbar-separator (quote (0.3)))
  '(tool-bar-mode nil))
 (custom-set-faces
