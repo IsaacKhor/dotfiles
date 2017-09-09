@@ -45,10 +45,6 @@
 ; Change nav behaviour when dealing with text
 (add-hook 'text-mode (lambda () (longlines-mode 1)))
 
-; Rich minority doesn't want to automatically turn on for some reason
-; if set from Custom
-(rich-minority-mode 1)
-
 ; Smart mode line
 (sml/setup)
 
@@ -58,8 +54,9 @@
    (lisp-interaction-mode "LispInt")))
 
 (dim-minor-names
- '((helm-mode " H")
-   (company-mode " CP")))
+ '((helm-mode "")
+   (company-mode "")
+   (visual-line-mode "")))
 
 ; Custom parinfer mode display names
 (setq parinfer-lighters '(" (i)" . " (p)"))
@@ -118,4 +115,4 @@
 (bind-key "C-x b" #'helm-mini)
 (bind-key "C-x C-f" #'helm-find-files)
 (bind-key "C-c C-m" #'magit-status)
-(bind-key "<tab>" #'company-complete)
+(bind-key "C-'" #'helm-projectile-find-file)
