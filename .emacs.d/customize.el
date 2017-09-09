@@ -20,6 +20,7 @@
  '(electric-pair-mode t)
  '(fci-rule-color "dark gray")
  '(fci-rule-column 80)
+ '(global-linum-mode t)
  '(helm-mode nil)
  '(ido-mode nil nil (ido))
  '(inhibit-startup-screen t)
@@ -37,11 +38,13 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (smart-mode-line ac-slime ac-cider slime helm-projectile bind-key rainbow-delimiters rainbow-mode helm helm-cider helm-css-scss fill-column-indicator all-the-icons-dired all-the-icons-gnus all-the-icons-ivy all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode luarocks brainfuck-mode bookmark+ org parinfer color-theme-sanityinc-solarized color-theme auto-complete cider)))
+    (dired+ dim tabbar company smart-mode-line slime helm-projectile bind-key rainbow-delimiters rainbow-mode helm helm-cider helm-css-scss fill-column-indicator all-the-icons-dired all-the-icons-gnus all-the-icons-ivy all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode luarocks brainfuck-mode bookmark+ org parinfer color-theme-sanityinc-solarized color-theme cider)))
+ '(projectile-mode t nil (projectile))
  '(recentf-max-menu-items 100)
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
- '(rm-blacklist (quote (" Helm" " ICY")))
+ '(rich-minority-mode t)
+ '(rm-blacklist (quote (" Icy" " ICY" " $")))
  '(scroll-bar-mode nil)
  '(sml/replacer-regexp-list
    (quote
@@ -49,10 +52,14 @@
      ("^~/\\.emacs\\.d/" ":emacs:")
      ("^~/Documents/" ":Doc:")
      ("^~/Documents/code/" ":code:"))))
+ '(sublimity-scroll-weight 4.0)
+ '(tabbar-mode nil nil (tabbar))
+ '(tabbar-separator (quote (0.3)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 130 :family "Fira Code")))))
+ '(default ((t (:height 130 :family "Fira Code"))))
+ '(tabbar-button ((t (:inherit tabbar-default :box nil)))))
