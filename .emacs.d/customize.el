@@ -44,14 +44,15 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (dired+ dim tabbar company smart-mode-line slime helm-projectile bind-key rainbow-delimiters rainbow-mode helm helm-cider helm-css-scss fill-column-indicator all-the-icons-dired all-the-icons-gnus all-the-icons-ivy all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode luarocks brainfuck-mode bookmark+ org parinfer color-theme-sanityinc-solarized color-theme cider)))
+    (geiser dired+ dim company smart-mode-line slime helm-projectile bind-key rainbow-delimiters rainbow-mode helm helm-cider fill-column-indicator all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode brainfuck-mode org parinfer color-theme-sanityinc-solarized color-theme cider)))
  '(projectile-mode t nil (projectile))
  '(recentf-max-menu-items 100)
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(rich-minority-mode nil)
- '(rm-blacklist (quote (" Icy" " ICY" " $")))
+ '(rm-blacklist (quote (" Icy" " ICY" " $" " ARev")))
  '(scroll-bar-mode nil)
+ '(set-mark-command-repeat-pop t)
  '(sml/replacer-regexp-list
    (quote
     (("^~/\\.emacs\\.d/elpa/" ":elpa:")
@@ -68,5 +69,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 130 :family "Fira Code"))))
+ '(default ((t (:height 130 :family "Hasklig"))))
  '(tabbar-button ((t (:inherit tabbar-default :box nil)))))

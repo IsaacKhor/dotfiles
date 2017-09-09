@@ -4,12 +4,21 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; ==============
+;; CUSTOMISATIONS
+;; ==============
+
+; Put customisations in a seperate file
 (setq custom-file "~/.emacs.d/customize.el")
 (load custom-file)
 
 ; Prompt to save new options upon exit
 (add-hook 'kill-emacs-query-functions
           'custom-prompt-customize-unsaved-options)
+
+;; ===========
+;; MINOR MODES
+;; ===========
 
 ; Minor modes
 (defun add-hook-to-minor-mode (mode hooks)
@@ -48,6 +57,23 @@
 ; Autocomplete via company-mode
 (global-company-mode)
 
+; Disable FCI while company presents popup; workaround described
+; here: https://github.com/company-mode/company-mode/issues/180
+; Or else fci will interfere with the popup
+(defvar-local company-fci-mode-on-p nil)
+
+(defun company-turn-off-fci (&rest ignore)
+  (when (boundp 'fci-mode)
+    (setq company-fci-mode-on-p fci-mode)
+    (when fci-mode (fci-mode -1))))
+
+(defun company-maybe-turn-on-fci (&rest ignore)
+  (when company-fci-mode-on-p (fci-mode 1)))
+
+(add-hook 'company-completion-started-hook 'company-turn-off-fci)
+(add-hook 'company-completion-finished-hook 'company-maybe-turn-on-fci)
+(add-hook 'company-completion-cancelled-hook 'company-maybe-turn-on-fci)
+
 ; Longlines mode for text
 ; Change nav behaviour when dealing with text
 (add-hook 'text-mode (lambda () (longlines-mode 1)))
@@ -61,9 +87,9 @@
    (lisp-interaction-mode "LispInt")))
 
 (dim-minor-names
- '((helm-mode "")
-   (company-mode "")
-   (visual-line-mode "")))
+  '((helm-mode "")
+    (company-mode "")
+    (visual-line-mode "")))
 
 ; Custom parinfer mode display names
 (setq parinfer-lighters '(" (i)" . " (p)"))
@@ -81,6 +107,10 @@
 ; The default electrical auto indent is stupid
 ; It randomly indents away all of your comments, especially in elisp
 (setq-default electric-indent-inhibit t)
+
+;; ===================
+;; HELM AND EXTENSIONS
+;; ===================
 
 ; Helm configuration
 (require 'helm-config)
@@ -106,16 +136,19 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 
-; Keybindings
-(require 'bind-key)
+;; ===========
+;; Keybindings
+;; ===========
 (bind-key "C-x C-r" #'helm-recentf)
 (bind-key "<f8>" #'neotree-toggle)
 (bind-key "C-x k" #'kill-this-buffer)
-(bind-key "C-x C-b" #'bs-show)
+(bind-key "C-x C-b" #'helm-mini)
 (bind-key "C-{" #'bs-cycle-next) 
 (bind-key "C-}" #'bs-cycle-previous)
 (bind-key "M-x" #'helm-M-x)
-(bind-key "C-x b" #'helm-mini)
+(bind-key "C-x b" #'bs-show)
 (bind-key "C-x C-f" #'helm-find-files)
-(bind-key "C-c C-m" #'magit-status)
+(bind-key "C-c m" #'magit-status)
 (bind-key "C-'" #'helm-projectile-find-file)
+(bind-key "C-," #'helm-mini)
+(bind-key "<tab>" #'company-indent-or-complete-common)
