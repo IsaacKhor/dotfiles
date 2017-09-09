@@ -33,7 +33,14 @@
 (add-hook-to-minor-mode #'fix-indent
    '(emacs-lisp-mode-hook
      lisp-interaction-mode-hook
-     lisp-mode-hook))   
+     lisp-mode-hook))
+
+; Add fill column indicator (fci) for certain modes
+(add-hook-to-minor-mode #'fci-mode
+  '(emacs-lisp-mode-hook
+    lisp-mode-hook
+    lisp-interaction-mode-hook
+    clojure-mode-hook))
 
 ; CIDER for Clojure(Script)
 (add-hook 'clojure-mode-hook #'cider-mode)
@@ -64,10 +71,6 @@
 ; Icicles don't want to work with Customize for some reason, so
 ; we enable it manually
 (icy-mode 1)
-
-; Enable Fill Column Idicator (FCI) as a global minor mode
-(define-globalized-minor-mode global-fci-mode fci-mode turn-on-fci-mode)
-(global-fci-mode 1)
 
 ; Enable rainbow-delimiters-mode globally
 (define-globalized-minor-mode
