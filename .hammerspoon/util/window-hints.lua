@@ -14,12 +14,6 @@ mod.config = {
 	style = "default",
 }
 
--- Show window hints for the active application
-function activeAppHints()
-	local windows = hs.window.focusedWindow():application():allWindows()
-	hs.hints.windowHints(windows, nil, nil)
-end
-
 function mod.init()
 	hs.hints.style = mod.config.style
 
@@ -29,15 +23,23 @@ function mod.init()
 
 	-- Must use fully-qualified name of the font according to the docs
 	hs.hints.fontName = "Inconsolata-Regular"
-	hs.hints.fontSize = 24
+	hs.hints.fontSize = 18
 
 	-- Show window hints for all windows
-	bind(mod.config.allWinKey, hs.hints.windowHints)
+	bind(mod.config.allWinKey,
+		function()
+			local wins = hs.window.visibleWindows()
+			hs.hints.windowHints(wins, nil, false)
+		end)
 
 	-- Hints for active app only
 	-- Disabled while vimperator mode is active
 	if not mod.config.style == "vimperator" then
-		bind(mod.config.activeAppKey, activeAppHints)
+		bind(mod.config.activeAppKey,
+			function()
+				local wins = hs.window.focusedWindow():application():allWindows()
+				hs.hints.windowHints(wins, nil, false)
+			end)
 	end
 end
 

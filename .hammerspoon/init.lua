@@ -92,6 +92,14 @@ function emitKey(mod, key)
     hs.eventtap.keyStroke(mod, key, 1000)
 end
 
+table.filter = function(coll, f)
+    local out = {}
+    for k,v in pairs(coll) do
+        if f(v) then out[k]=v end
+    end
+    return out
+end
+
 --
 -- Everything successful
 --
