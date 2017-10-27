@@ -45,7 +45,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (use-package geiser dired+ dim company smart-mode-line slime helm-projectile bind-key rainbow-delimiters rainbow-mode helm helm-cider fill-column-indicator all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode brainfuck-mode org parinfer color-theme-sanityinc-solarized color-theme cider)))
+    (doremi-cmd color-theme-solarized use-package geiser dired+ dim company smart-mode-line slime helm-projectile bind-key rainbow-delimiters rainbow-mode helm helm-cider fill-column-indicator all-the-icons neotree lacarte icicles magit markdown-mode markdown-mode+ lua-mode brainfuck-mode org parinfer color-theme-sanityinc-solarized color-theme cider)))
  '(projectile-mode t nil (projectile))
  '(recentf-max-menu-items 100)
  '(recentf-max-saved-items 100)
