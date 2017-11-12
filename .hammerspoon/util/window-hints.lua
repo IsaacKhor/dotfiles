@@ -5,9 +5,9 @@
 local mod = {}
 mod.config = {
 	-- Shortcut for all windows hint
-	allWinKey = { "⌃", "d" },
+	allWinKey = { "⌘⌃", "d" },
 	-- Shortcut for hint for active app only
-	activeAppKey = { "⌃⇧", "d" },
+	activeAppKey = { "⌘⌃", "b" },
 	-- Hints style
 	-- use 'vimperator' if you want the hint char to be the
 	-- first letter of the window title

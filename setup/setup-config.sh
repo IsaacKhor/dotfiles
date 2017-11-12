@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Initial setup
+ln -sf /Users/home/.config  ~/.config
+ln -sf /Users/home/.misc    ~/.misc
+ln -lf /Users/home          ~/home
+ln -sf ~/.misc/.local       ~/.local
+
 # HOME dir
 ln -sf ~/.config/Home/.iterm2_shell_integration.fish ~/.iterm2_shell_integration.fish
 ln -sf ~/.config/Home/.atom         ~/.atom
@@ -11,13 +17,20 @@ ln -sf ~/.config/Home/quicklisp     ~/quicklisp
 ln -sf ~/.config/Home/.gitconfig    ~/.gitconfig
 ln -sf ~/.config/Home/.sbclrc       ~/.sbclrc
 ln -sf ~/.config/Home/.viminfo      ~/.viminfo
+ln -sf ~/.config/Home/.gem          ~/.gem
+ln -sf ~/.config/Home/.anaconda     ~/.anaconda
+ln -sf ~/.config/Home/.bundle       ~/.bundle
 #ln -sf ~/.config/Home/ ~/
+
+# dotfiles
+ln -sf ~/home/dotfiles/.hammerspoon ~/.hammerspoon
 
 # Within ~/Library itself
 ln -sf ~/.config/Library/Fonts          ~/Library/Fonts
 ln -sf ~/.config/Library/Keychains      ~/Library/Keychains
 
 # Firefox
+mkdir -p ~/Library/Application\ Support/Firefox/Profiles
 ln -sf ~/.config/Library/Custom/profiles.ini        ~/Library/Application\ Support/Firefox/profiles.ini
 ln -sf ~/.config/Library/Custom/profile.default     ~/Library/Application\ Support/Firefox/Profiles/profile.default
 
@@ -31,6 +44,7 @@ ln -sf ~/.config/Library/Application\ Support/LightTable               ~/Library
 ln -sf ~/.config/Library/Application\ Support/MacDown                  ~/Library/Application\ Support/MacDown
 ln -sf ~/.config/Library/Application\ Support/Sublime\ Text\ 3         ~/Library/Application\ Support/Sublime\ Text\ 3
 ln -sf ~/.config/Library/Application\ Support/VeraCrypt                ~/Library/Application\ Support/VeraCrypt
+ln -sf ~/.config/Library/Application\ Support/com.operasoftware.Opera  ~/Library/Application\ Support/com.operasoftware.Opera
 #ln -sf ~/.config/Library/Application\ Support/      ~/Library/Application\ Support/
 
 # Containers

@@ -9,11 +9,9 @@
 --/ Cheatsheet Copycat /--
 ------------------------------------------------------------------------
 
-local masterMode = require("modes.master")
-
 local mod = {}
 mod.config = {
-  cheatsheetKey = {"⌃", ";"},
+  cheatsheetKey = {"⌘⌃", ";"},
   width = 1080,
   height = 800,
   devExtras = false,
@@ -53,7 +51,7 @@ local function getAllMenuItemsTable(t)
                     menu[pos]['AXTitle'] = val['AXTitle']
                     menu[pos]['AXMenuItemCmdChar'] = val['AXMenuItemCmdChar']
                     menu[pos]['AXMenuItemCmdModifiers'] = val['AXMenuItemCmdModifiers']
-                  end 
+                  end
               elseif(val['AXRole'] =="AXMenuItem" and type(val['AXChildren']) == "table") then
                   menu[pos] = {}
                   menu[pos][1] = getAllMenuItems(val['AXChildren'][1])
@@ -77,7 +75,7 @@ local function getAllMenuItems(t)
             elseif(val['AXRole'] =="AXMenuItem" and not val['AXChildren']) then
                 if( val['AXMenuItemCmdModifiers'] ~='0' and val['AXMenuItemCmdChar'] ~='') then
                     --print(val['AXMenuItemCmdModifiers'].." | "..val['AXTitle'].." | CmdChar: "..val['AXMenuItemCmdChar'])
-                    menu = 
+                    menu =
                       menu ..
                       "<li><div class='cmdModifiers'>" ..
                       modifiersToPrettyString(val['AXMenuItemCmdModifiers']) ..
@@ -87,11 +85,11 @@ local function getAllMenuItems(t)
                       " " ..
                       val['AXTitle']..
                       "</div></li>"
-                end 
+                end
             elseif(val['AXRole'] =="AXMenuItem" and type(val['AXChildren']) == "table") then
                 menu = menu..getAllMenuItems(val['AXChildren'][1])
             end
-          
+
         end
     end
     return menu
@@ -110,7 +108,7 @@ local function generateHtml()
         <head>
         <style type="text/css">
             *{margin:0; padding:0;}
-            html, body{ 
+            html, body{
               background-color:#eee;
               font-family: arial;
               font-size: 13px;
@@ -164,7 +162,7 @@ local function generateHtml()
               width: 23%;
               padding:10px 0 20px 20px;
             }
-            
+
             li:after{
               visibility: hidden;
               display: block;
@@ -211,7 +209,7 @@ end
 
 local myView = nil
 
-function showCheatsheet() 
+function showCheatsheet()
   if not myView then
     local max = hs.screen.mainScreen():frame()
 
@@ -238,7 +236,6 @@ end
 
 function mod.init()
   bind(mod.config.cheatsheetKey, showCheatsheet)
-  masterMode.registerEntry(mod.config.cheatsheetKey[2], "Show cheatsheet", showCheatsheet)
 end
 
 return mod

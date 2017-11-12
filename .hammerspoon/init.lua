@@ -24,14 +24,8 @@ hs.alert.defaultStyle.radius = 12
 local plugins = {
     {"util.config-reload", {}},
 
-    -- Modes
-    {"Mode", {}},
-    {"modes.master", {}},
-    {"modes.system", {}},
-    {"modes.window", {}},
-
     -- Utilities
-    {"util.ff-tab-switch", {}},
+    {"util.tab-switch", {}},
     {"util.cheatsheet", {}},
     {"util.window-hints", {}},
 }
