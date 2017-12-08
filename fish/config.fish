@@ -2,7 +2,7 @@
 
 set EDITOR vim
 set BOOT_JVM_OPTIONS '-XX:MaxMetaspaceSize=128m -Xms256m -Xmx512m -client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Xverify:none'
-set PATH "/usr/local/anaconda3/bin" "/Users/home/dotfiles/scripts" "/usr/local/sbin" "/usr/local/opt/coreutils/libexec/gnubin" $PATH
+set PATH "~/Documents/dotfiles/scripts" "/usr/local/sbin" "/usr/local/opt/coreutils/libexec/gnubin" "~/scripts" $PATH
 
 # bobthefish config options
 
