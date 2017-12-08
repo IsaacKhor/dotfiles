@@ -1,19 +1,22 @@
 #!/usr/bin/env fish
 
 set brew_packages '
-autoconf  fish         heroku    libtiff  pcre      sqlite
-automake  fontconfig     hugo    libtool  pcre2     swig
-bdw-gc    freetype       icu4c     libyaml  pkg-config  testdisk
-boot-clj  gd         iperf     libzip planck      texi2html
-clisp   gdbm         jpeg    lua    postgresql  webp
-cmake   gettext        lame    lumo   python3     wget
-coreutils git-flow       ldns    makedepend readline    x264
-datomic   gmp        leiningen   minisign rsync     xvid
-dnscrypt-proxy  go         libffi    mysql  ruby      xz
-duti    govendor       libpng    nasm   rust      yasm
-ecl   gradle         libsigsegv  node   sbcl
-ffmpeg    graphviz       libsodium   openssl  scala
-findutils haskell-stack  libssh2     openssl@1.1  sphinx-doc
+autoconf	freetype	lame		mysql		sbcl
+automake	gd		ldns		nasm		scala
+bdw-gc		gdbm		leiningen	nmap		sphinx-doc
+boot-clj	gettext		libffi		node		sqlite
+clisp		git-flow	libpng		openssl		swi-prolog
+cmake		gmp		libsigsegv	openssl@1.1	swig
+coreutils	go		libsodium	pcre		testdisk
+datomic		govendor	libssh2		pcre2		texi2html
+dnscrypt-proxy	gradle		libtiff		pkg-config	webp
+duti		graphviz	libtool		planck		wget
+ecl		haskell-stack	libyaml		postgresql	x264
+elm		heroku		libzip		python3		xvid
+ffmpeg		hugo		lua		readline	xz
+findutils	icu4c		lumo		rsync		yasm
+fish		iperf		makedepend	ruby
+fontconfig	jpeg		minisign	rust
 '
 
 set brew_cask_packages '
