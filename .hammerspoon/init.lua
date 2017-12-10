@@ -25,7 +25,7 @@ local plugins = {
     {"util.config-reload", {}},
 
     -- Utilities
-    {"util.tab-switch", {}},
+    {"util.magic-remapping", {}},
     {"util.cheatsheet", {}},
     {"util.window-hints", {}},
 }
