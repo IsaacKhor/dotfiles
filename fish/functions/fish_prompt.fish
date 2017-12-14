@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/bobthefish/fish_prompt.fish
+/Users/cclark/.config/fisherman/pure/fish_prompt.fish
