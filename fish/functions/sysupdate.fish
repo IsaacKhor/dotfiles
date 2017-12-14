@@ -1,4 +1,4 @@
-function update
+function sysupdate
   echo "Updating brews"
   brew update
   brew upgrade

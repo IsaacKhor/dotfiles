@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/getopts/getopts.fish
