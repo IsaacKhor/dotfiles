@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env fish
 
 # Symlink everything
 
@@ -19,5 +19,5 @@ ln -sfFn ~/Documents/.hidden/Google\ Drive/* ~/Documents
 
 # Library
 ln -sfFn ~/Documents/.hidden/Library/Application\ Support/* ~/Library/Application\ Support/
-ln -sfFn ~/Documents/.hidden/Library/Container/* ~/Library/Container/
+ln -sfFn ~/Documents/.hidden/Library/Containers/* ~/Library/Containers/
 ln -sfFn ~/Documents/.hidden/Library/Preferences/* ~/Library/Preferences/
