@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/battery/init.fish

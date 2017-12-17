@@ -1,12 +1,6 @@
 .DS_Store
-.emacs.d/autosave-list/
-.emacs.d/recentf*
-.emacs.d/network-security.data
-.emacs.d/ac*
-.emacs.d/SessionDesktop.el
-.emacs.d/projectile-bookmarks.eld
-.emacs.d/elpa/archives/
 *.elc
 *~
 *.gpg
 *#$
+.emacs.d/

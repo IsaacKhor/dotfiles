@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/license/completions/license.fish

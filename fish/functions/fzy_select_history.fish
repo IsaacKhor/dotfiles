@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/fzy/functions/fzy_select_history.fish
