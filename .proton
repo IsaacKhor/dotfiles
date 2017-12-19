@@ -14,42 +14,40 @@
            :lang/typescript
            :lang/haskell]
 
-  :additional-packages [:project-manager
-                        :language-lua
-                        :linter-lua]
+  :additional-packages [:language-lua
+                        :linter-lua
+                        :atom-ide-ui
+                        :autocomplete-python-jedi
+                        :language-fish-shell]
 
   ;; Packages that you want to disable.
   ;; Note that packages will be removed except bundled packages.
   ;; Bundled packages will be disabled instead.
   ;; Use this configuration instead of atom's `core.disabledPackages`
   :disabled-packages [:about
-                      :welcome]
+                      :welcome
+                      :autocomplete-python]
 
   ;; Proton takes over your atom configuration. All settings that are not listed here will get wiped
   ;; Configurations are denoted as 2 element vector consisting of k/v
   ;; sub-vectors inside v will get treated like javascript arrays
   :configuration
-  [
-    ;; appearance
-    ["editor.fontFamily" "Hasklig"]
-    ["editor.fontSize" 12]
-    ["editor.scrollPastEnd" true]
-    ["editor.showInvisibles" true]
+  [;; Appearance
+   ["editor.fontFamily" "Hasklig"]
+   ["editor.fontSize" 12]
+   ["editor.scrollPastEnd" true]
+   ["editor.showInvisibles" true]
+   ["core.themes" ["one-dark-ui" "solarized-dark-syntax"]]
 
-    ;; Addons config
-    ["linter-clojure.clojureExecutablePath" "/usr/local/bin/clojure"]
+   ;; Addons config
+   ["linter-clojure.clojureExecutablePath" "/usr/local/bin/clojure"]
+   ["atom-ide-ui.use.atom-ide-diagnostics-ui" false]
 
-    ;; the current default theme
-    ["core.themes" ["one-dark-ui" "solarized-dark-syntax"]]
-
-    ;; proton configuration
-    ["proton.core.showTabBar" true]
-    ["proton.core.relativeLineNumbers" true]
-    ["proton.core.alwaysShowWelcomeScreen" false]
-
-    ;; prefer classic vim mode over vim-mode-plus? Change this to :vim-mode
-    ["proton.core.inputProvider" :vim-mode-plus]]
-
+   ;; Proton configuration
+   ["proton.core.showTabBar" true]
+   ["proton.core.relativeLineNumbers" true]
+   ["proton.core.alwaysShowWelcomeScreen" false]
+   ["proton.core.inputProvider" :vim-mode-plus]]
 
   ;; Don't like a keybinding or want to add something yourself? Do it here
   ;; The following example adds a category `foo-category` under <SPC>z
@@ -62,14 +60,12 @@
   :keybindings
   {:t {:category "toggle"
        :p {:title "toggle parinfer mode"
-           :action "parinfer:toggle-mode"}}}
+           :action "parinfer:toggle-mode"}}
+   :g {:category "git"
+       :u {:title "GitHub UI"
+           :action "github:commit"}}}
 
   ;; Want some custom behavior inside a certain window?
   ;; Add your own nifty things here!
   :keymaps [{:selector ".tree-view"
-             :keymap [["escape" "tree-view:toggle"]]}
-            ;; Want to rebind ESC to something else? You can do that here.
-            ;; If you are good with esc, just remove the following line.
-            {:selector "atom-text-editor.vim-mode-plus:not(.normal-mode)"
-             :keymap [["f d" "vim-mode-plus:activate-normal-mode"]]}]}
-            ;; {:selector "atom-text-editor.vim-mode:not(.normal-mode)" :keymap [["f d" "vim-mode:activate-normal-mode"]]}
+             :keymap [["escape" "tree-view:toggle"]]}]}
