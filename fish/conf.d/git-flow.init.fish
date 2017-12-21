@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/git-flow/init.fish

@@ -39,5 +39,5 @@ SET fish_pager_color_description:B3A06D\x1eyellow
 SET fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SET fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SET fisher_active_prompt:pure
-SET fisher_dependency_count:thefuck\x1egetopts\x1ez\x1epure\x1ebass\x1ebattery\x1ebrew\x2dcompletions\x1efzy\x1egrc\x1elicense\x1episces
+SET fisher_dependency_count:thefuck\x1egetopts\x1ez\x1epure\x1ebass\x1ebattery\x1ebrew\x2dcompletions\x1efzy\x1egrc\x1elicense\x1episces\x1egetopts\x1eget\x1ebrew\x1egit\x2dflow\x1egem\x1ehash\x1eosx\x1etab\x1evirtualfish
 SET pisces_pairs:\x28\x2c\x29\x1e\x5b\x2c\x5d\x1e\x7b\x2c\x7d\x1e\x22\x2c\x22\x1e\x27\x2c\x27

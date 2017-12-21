@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/osx/functions/updatedb.fish

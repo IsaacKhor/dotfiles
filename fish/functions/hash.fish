@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/hash/functions/hash.fish

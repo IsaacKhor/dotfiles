@@ -1,0 +1,1 @@
+/Users/cclark/.config/fisherman/tab/functions/tab.konsole.fish
