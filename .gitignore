@@ -4,3 +4,4 @@
 *.gpg
 *#$
 .emacs.d/
+nvim/bundle/
