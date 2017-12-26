@@ -2,7 +2,10 @@
 
 set EDITOR vimr
 set BOOT_JVM_OPTIONS '-XX:MaxMetaspaceSize=128m -Xms256m -Xmx512m -client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Xverify:none'
-set PATH "/usr/local/opt/coreutils/libexec/gnubin" "~/.local/bin" "~/Documents/dotfiles/scripts" $PATH
+set PATH "/usr/local/opt/coreutils/libexec/gnubin" $PATH
+set PATH "/Users/cclark/.local/bin" $PATH
+set PATH "/Users/cclark/Documents/dotfiles/scripts" $PATH
+set PATH "/Users/cclark/.cargo/bin" $PATH
 
 # bobthefish config options
 
