@@ -18,12 +18,12 @@ def clarentine_time(tf)
   end
 
   # +1 to cycle and day because they are 1-indexed
-  fmt_date = [season, cycle.inc, day + 1].map(&:to_str)
+  fmt_date = [season, cycle + 1, day + 1].map(&:to_s)
   fmt_date.join('.')
 end
 
 if ARGV.empty?
-  puts 'Today: ' + clarentine_time(Date.now.to_date)
+  puts 'Today: ' + clarentine_time(DateTime.now.to_date)
 else
   ARGV.each do |a|
     puts a + ': ' + clarentine_time(Date.parse(a))
