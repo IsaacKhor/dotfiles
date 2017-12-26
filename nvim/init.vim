@@ -5,15 +5,17 @@ call plug#begin('~/.config/nvim/plug')
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': './install.sh'
-    \ }                                  " LSP support for nvim
-Plug 'easymotion/vim-easymotion'         " Easymotion
-Plug 'godlygeek/tabular'                 " Alignment
-Plug 'iCyMind/NeoSolarized'              " Solarized for nvim
-Plug 'junegunn/fzf'                      " Fuzzy file find
-Plug 'roxma/nvim-completion-manager'     " nvim completion engine
-Plug 'tpope/vim-commentary'              " Comments
-Plug 'tpope/vim-fugitive'                " Git
-Plug 'tpope/vim-repeat'                  " Add '.' repeat to more things
+    \ }                              " LSP support for nvim
+Plug 'dag/vim-fish'                  " Fish shell syntax support
+Plug 'easymotion/vim-easymotion'     " Easymotion
+Plug 'godlygeek/tabular'             " Alignment
+Plug 'iCyMind/NeoSolarized'          " Solarized for nvim
+Plug 'junegunn/fzf'                  " Fuzzy file find
+Plug 'roxma/nvim-completion-manager' " nvim completion engine
+Plug 'tpope/vim-commentary'          " Comments
+Plug 'tpope/vim-fugitive'            " Git
+Plug 'tpope/vim-repeat'              " Add '.' repeat to more things
+Plug 'yuttie/comfortable-motion.vim' " Smooth scroll
 
 call plug#end()
 
@@ -27,7 +29,7 @@ set incsearch             " highlight terms dynamically as they are typed
 set number                " With relativenumber on, shows absolute line num on current line
 set relativenumber        " Turn on relative numbers
 set ruler                 " Line/col info at right-most region of status line
-set scrolloff=6           " Starts scrolling x lines before the end
+set scrolloff=4           " Starts scrolling x lines before the end
 set shortmess=aOtTI       " Shorter interactive messages
 set showcmd               " Show partial commands in the lower-right corner
 set tags=tags;~/          " Look for file in the current directory until home
@@ -56,11 +58,15 @@ set smartcase
 
 " Neovim-fixed solarized
 set termguicolors
-set background=light
+set background=dark
 colorscheme NeoSolarized
 
 filetype plugin indent on " Turn on filetype detection and indentation
 syntax on " Syntax highlighting
+
+" Smooth scrolling
+let g:comfortable_motion_friction=300
+let g:comfortable_motion_air_drag=4.0
 
 " Spacemacs-style keybindings
 let mapleader=" " " Set <Space> as the <leader>
