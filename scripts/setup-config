@@ -3,12 +3,12 @@
 # Symlink everything
 
 # Dotfiles
-ln -sfFn ../.hammerspoon/ ~/.hammerspoon
-ln -sfFn ../.proton ~/.proton
-ln -sfFn ../.wgetrc/ ~/.wgetrc
-ln -sfFn ../fish/ ~/.config/fish
-ln -sfFn ../karabiner/ ~/.config/karabiner
-ln -sfFn ../scripts/ ~/scripts
+ln -sfFn ~/Documents/dotfiles/.hammerspoon/ ~/.hammerspoon
+ln -sfFn ~/Documents/dotfiles/.proton ~/.proton
+ln -sfFn ~/Documents/dotfiles/.wgetrc/ ~/.wgetrc
+ln -sfFn ~/Documents/dotfiles/fish/ ~/.config/fish
+ln -sfFn ~/Documents/dotfiles/karabiner/ ~/.config/karabiner
+ln -sfFn ~/Documents/dotfiles/scripts/ ~/scripts
 
 # Home dir
 ln -sfFn ~/Documents/.hidden/.config ~/.config
