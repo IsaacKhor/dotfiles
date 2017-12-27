@@ -1,55 +1,51 @@
-{
-  ;; Layers you wish to have active
-  ;; To get a list of all available layers, check github.com/dvcrn/proton/tree/master/src/cljs/proton/layers
-  :layers [:core
-           :tools/git
-           :tools/linter
-           :lang/clojure
-           :lang/python
-           :lang/javascript
-           :lang/css
-           :lang/json
-           :lang/ruby
-           :lang/less
-           :lang/typescript
-           :lang/haskell]
+{;; Layers you wish to have active
+ :layers [:core
+          :tools/git
+          :tools/linter
+          :lang/clojure
+          :lang/javascript
+          :lang/css
+          :lang/ruby
+          :lang/less]
 
-  :additional-packages [:language-lua
-                        :linter-lua
-                        :atom-ide-ui
-                        :autocomplete-python-jedi
+ :additional-packages [:language-lua
+                       :linter-lua
+                       :atom-ide-ui
+                       :ide-typescript
+                       :ide-haskell-hie
+                       :ide-python
+                       :ide-rust
                         ; :relative-numbers-plus
-                        :language-fish-shell]
+                       :language-fish-shell]
 
   ;; Packages that you want to disable.
   ;; Note that packages will be removed except bundled packages.
   ;; Bundled packages will be disabled instead.
   ;; Use this configuration instead of atom's `core.disabledPackages`
-  :disabled-packages [:about
-                      :welcome
-                      ; :relative-numbers
-                      :autocomplete-python]
+ :disabled-packages [:about
+                     :welcome]
 
   ;; Proton takes over your atom configuration. All settings that are not listed here will get wiped
   ;; Configurations are denoted as 2 element vector consisting of k/v
   ;; sub-vectors inside v will get treated like javascript arrays
-  :configuration
-  [;; Appearance
-   ["editor.fontFamily" "Hasklig"]
-   ["editor.fontSize" 12]
-   ["editor.scrollPastEnd" true]
-   ["editor.showInvisibles" true]
-   ["core.themes" ["one-dark-ui" "solarized-dark-syntax"]]
+ :configuration
+ [;; Appearance
+  ["editor.fontFamily" "Hasklig"]
+  ["editor.fontSize" 12]
+  ["editor.scrollPastEnd" true]
+  ["editor.showInvisibles" true]
+  ["core.themes" ["one-dark-ui" "solarized-dark-syntax"]]
 
    ;; Addons config
-   ["linter-clojure.clojureExecutablePath" "/usr/local/bin/clojure"]
-   ["atom-ide-ui.use.atom-ide-diagnostics-ui" false]
+  ["linter-clojure.clojureExecutablePath" "/usr/local/bin/clojure"]
+  ["atom-ide-ui.use.atom-ide-diagnostics-ui" false]
+  ["autocomplete-ruby.rsense-path" "/usr/local/bin/rsense"]
 
    ;; Proton configuration
-   ["proton.core.showTabBar" true]
-   ["proton.core.relativeLineNumbers" true]
-   ["proton.core.alwaysShowWelcomeScreen" false]
-   ["proton.core.inputProvider" :vim-mode-plus]]
+  ["proton.core.showTabBar" true]
+  ["proton.core.relativeLineNumbers" true]
+  ["proton.core.alwaysShowWelcomeScreen" false]
+  ["proton.core.inputProvider" :vim-mode-plus]]
 
   ;; Don't like a keybinding or want to add something yourself? Do it here
   ;; The following example adds a category `foo-category` under <SPC>z
@@ -59,15 +55,15 @@
   ;; :keybindings {:z {:category "foo-category"
   ;;                   :y {:title "execute hello"
   ;;                       :action "hello"}}}
-  :keybindings
-  {:t {:category "toggle"
-       :p {:title "toggle parinfer mode"
-           :action "parinfer:toggle-mode"}}
-   :g {:category "git"
-       :u {:title "GitHub UI"
-           :action "github:commit"}}}
+ :keybindings
+ {:t {:category "toggle"
+      :p {:title "toggle parinfer mode"
+          :action "parinfer:toggle-mode"}}
+  :g {:category "git"
+      :u {:title "GitHub UI"
+          :action "github:commit"}}}
 
   ;; Want some custom behavior inside a certain window?
   ;; Add your own nifty things here!
-  :keymaps [{:selector ".tree-view"
-             :keymap [["escape" "tree-view:toggle"]]}]}
+ :keymaps [{:selector ".tree-view"
+            :keymap [["escape" "tree-view:toggle"]]}]}
