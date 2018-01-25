@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/brew-completions/completions/brew.fish
+/Users/clarence/.config/fisherman/brew-completions/completions/brew.fish

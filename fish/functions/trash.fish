@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/osx/functions/trash.fish
+/Users/clarence/.config/fisherman/osx/functions/trash.fish

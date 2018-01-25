@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/thefuck/functions/fuck.fish
+/Users/clarence/.config/fisherman/thefuck/functions/fuck.fish

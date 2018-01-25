@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/bass/functions/__bass.py
+/Users/clarence/.config/fisherman/bass/functions/__bass.py

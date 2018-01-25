@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/get/functions/get.fish
+/Users/clarence/.config/fisherman/get/functions/get.fish

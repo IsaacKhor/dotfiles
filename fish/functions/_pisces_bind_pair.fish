@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/pisces/functions/_pisces_bind_pair.fish
+/Users/clarence/.config/fisherman/pisces/functions/_pisces_bind_pair.fish

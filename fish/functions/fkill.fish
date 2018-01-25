@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/fzy/functions/fkill.fish
+/Users/clarence/.config/fisherman/fzy/functions/fkill.fish

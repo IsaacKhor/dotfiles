@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/thefuck/functions/__tf_updt.fish
+/Users/clarence/.config/fisherman/thefuck/functions/__tf_updt.fish

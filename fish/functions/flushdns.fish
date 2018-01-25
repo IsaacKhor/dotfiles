@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/osx/functions/flushdns.fish
+/Users/clarence/.config/fisherman/osx/functions/flushdns.fish

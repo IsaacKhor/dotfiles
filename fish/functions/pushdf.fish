@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/osx/functions/pushdf.fish
+/Users/clarence/.config/fisherman/osx/functions/pushdf.fish

@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/osx/functions/ql.fish
+/Users/clarence/.config/fisherman/osx/functions/ql.fish

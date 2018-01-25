@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/z/functions/zadd.awk
+/Users/clarence/.config/fisherman/z/functions/zadd.awk

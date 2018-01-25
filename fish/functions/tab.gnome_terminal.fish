@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/tab/functions/tab.gnome_terminal.fish
+/Users/clarence/.config/fisherman/tab/functions/tab.gnome_terminal.fish

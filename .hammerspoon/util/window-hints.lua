@@ -11,7 +11,7 @@ mod.config = {
 	-- Hints style
 	-- use 'vimperator' if you want the hint char to be the
 	-- first letter of the window title
-	style = "default",
+	style = "vimperator",
 }
 
 function mod.init()

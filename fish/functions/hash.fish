@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/hash/functions/hash.fish
+/Users/clarence/.config/fisherman/hash/functions/hash.fish

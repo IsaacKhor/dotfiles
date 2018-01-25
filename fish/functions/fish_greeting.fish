@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/pure/fish_greeting.fish
+/Users/clarence/.config/fisherman/pure/fish_greeting.fish

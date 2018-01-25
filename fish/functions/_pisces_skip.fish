@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/pisces/functions/_pisces_skip.fish
+/Users/clarence/.config/fisherman/pisces/functions/_pisces_skip.fish

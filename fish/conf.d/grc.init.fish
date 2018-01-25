@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/grc/init.fish
+/Users/clarence/.config/fisherman/grc/init.fish

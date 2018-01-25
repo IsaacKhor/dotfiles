@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/z/conf.d/z.fish
+/Users/clarence/.config/fisherman/z/conf.d/z.fish

@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/battery/functions/battery.info.update.fish
+/Users/clarence/.config/fisherman/battery/functions/battery.info.update.fish

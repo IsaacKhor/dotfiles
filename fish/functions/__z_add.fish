@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/z/functions/__z_add.fish
+/Users/clarence/.config/fisherman/z/functions/__z_add.fish

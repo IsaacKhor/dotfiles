@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/getopts/getopts.fish
+/Users/clarence/.config/fisherman/getopts/getopts.fish

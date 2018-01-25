@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/git-flow/completions/git.fish
+/Users/clarence/.config/fisherman/git-flow/completions/git.fish

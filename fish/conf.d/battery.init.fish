@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/battery/init.fish
+/Users/clarence/.config/fisherman/battery/init.fish

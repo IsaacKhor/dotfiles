@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/tab/functions/tab.apple_terminal.fish
+/Users/clarence/.config/fisherman/tab/functions/tab.apple_terminal.fish

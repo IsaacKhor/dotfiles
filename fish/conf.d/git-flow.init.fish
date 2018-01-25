@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/git-flow/init.fish
+/Users/clarence/.config/fisherman/git-flow/init.fish

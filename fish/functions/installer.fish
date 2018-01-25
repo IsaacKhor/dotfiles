@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/pure/installer.fish
+/Users/clarence/.config/fisherman/pure/installer.fish

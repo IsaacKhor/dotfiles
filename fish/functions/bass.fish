@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/bass/functions/bass.fish
+/Users/clarence/.config/fisherman/bass/functions/bass.fish

@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/tab/functions/tab.iterm_legacy.splith.fish
+/Users/clarence/.config/fisherman/tab/functions/tab.iterm_legacy.splith.fish

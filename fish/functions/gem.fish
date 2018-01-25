@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/gem/gem.fish
+/Users/clarence/.config/fisherman/gem/gem.fish

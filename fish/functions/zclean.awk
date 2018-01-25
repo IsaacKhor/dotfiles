@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/z/functions/zclean.awk
+/Users/clarence/.config/fisherman/z/functions/zclean.awk

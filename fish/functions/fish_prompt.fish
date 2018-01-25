@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/pure/fish_prompt.fish
+/Users/clarence/.config/fisherman/pure/fish_prompt.fish

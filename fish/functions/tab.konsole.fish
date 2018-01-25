@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/tab/functions/tab.konsole.fish
+/Users/clarence/.config/fisherman/tab/functions/tab.konsole.fish

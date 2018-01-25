@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/get/completions/get.fish
+/Users/clarence/.config/fisherman/get/completions/get.fish

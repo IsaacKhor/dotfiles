@@ -1,1 +1,1 @@
-/Users/cclark/.config/fisherman/license/functions/license.fish
+/Users/clarence/.config/fisherman/license/functions/license.fish
