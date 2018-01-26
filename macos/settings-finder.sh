@@ -115,4 +115,3 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	General -bool true \
 	OpenWith -bool true \
 Privileges -bool true
-
