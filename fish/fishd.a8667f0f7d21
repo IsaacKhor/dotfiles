@@ -2,9 +2,9 @@
 # Do NOT edit it directly, your changes will be overwritten.
 SET ZO_CMD:zo
 SET Z_CMD:z
-SET Z_DATA:/Users/cclark/\x2elocal/share/z/data
-SET Z_DATA_DIR:/Users/cclark/\x2elocal/share/z
-SET Z_EXCLUDE:/Users/cclark
+SET Z_DATA:/Users/clarence/\x2elocal/share/z/data
+SET Z_DATA_DIR:/Users/clarence/\x2elocal/share/z
+SET Z_EXCLUDE:/Users/clarence
 SET __fish_classic_git_prompt_initialized:\x1d
 SET __fish_init_2_39_8:\x1d
 SET __fish_init_2_3_0:\x1d
