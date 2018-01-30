@@ -113,3 +113,11 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 # Randomize port on launch
 defaults write org.m0k.transmission RandomPort -bool true
+
+
+##########
+# CUSTOM #
+##########
+
+# Disable Cmd+Ctrl+D dictionary binding
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
