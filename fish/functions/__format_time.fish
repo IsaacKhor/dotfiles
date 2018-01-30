@@ -1,1 +1,1 @@
-/Users/clarence/.config/fisherman/pure/__format_time.fish
+/Users/cclark/.config/fisherman/pure/__format_time.fish

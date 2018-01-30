@@ -1,1 +1,1 @@
-/Users/clarence/.config/fisherman/pure/__parse_git_branch.fish
+/Users/cclark/.config/fisherman/pure/__parse_git_branch.fish
