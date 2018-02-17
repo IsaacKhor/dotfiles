@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/tab/functions/tab.apple_terminal.fish

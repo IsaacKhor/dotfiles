@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/osx/functions/updatedb.fish

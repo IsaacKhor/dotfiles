@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/git-flow/completions/git.fish

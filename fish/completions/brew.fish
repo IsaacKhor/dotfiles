@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/brew-completions/completions/brew.fish

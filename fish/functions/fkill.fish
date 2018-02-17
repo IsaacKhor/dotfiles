@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/fzy/functions/fkill.fish

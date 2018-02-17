@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/license/functions/license.fish

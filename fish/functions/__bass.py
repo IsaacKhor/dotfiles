@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/bass/functions/__bass.py

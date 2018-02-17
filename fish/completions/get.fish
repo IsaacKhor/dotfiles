@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/get/completions/get.fish

@@ -1,1 +1,0 @@
-/Users/clarence/.config/fisherman/thefuck/functions/fuck.fish
