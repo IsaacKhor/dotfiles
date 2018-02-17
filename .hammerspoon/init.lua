@@ -28,6 +28,7 @@ local plugins = {
   {"util.magic-remapping", {}},
   {"util.cheatsheet", {}},
   {"util.window-hints", {}},
+  -- {"util.expose", {}},
 }
 
 local function loadPlugin(plugin, config)
