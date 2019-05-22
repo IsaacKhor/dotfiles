@@ -1,89 +1,124 @@
-set shell=/bin/bash
+" =============================
+" ========== Plugins ========== 
+" =============================
 
-call plug#begin('~/.config/nvim/plug')
+" Plugins in their own directory
+call plug#begin('~/.config/nvim/plugins')
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': './install.sh'
-    \ }                              " LSP support for nvim
-Plug 'dag/vim-fish'                  " Fish shell syntax support
-Plug 'easymotion/vim-easymotion'     " Easymotion
-Plug 'godlygeek/tabular'             " Alignment
-Plug 'iCyMind/NeoSolarized'          " Solarized for nvim
-Plug 'junegunn/fzf'                  " Fuzzy file find
-Plug 'roxma/nvim-completion-manager' " nvim completion engine
-Plug 'tpope/vim-commentary'          " Comments
-Plug 'tpope/vim-fugitive'            " Git
-Plug 'tpope/vim-repeat'              " Add '.' repeat to more things
-Plug 'yuttie/comfortable-motion.vim' " Smooth scroll
+" This version doesn't work with vimr for some wierd reason
+Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'mhartington/oceanic-next'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'sickill/vim-monokai'
+
+" Conveniences
+Plug 'tpope/vim-surround' " For surrounding stuff
+Plug 'andymass/vim-matchup'
+Plug 'jiangmiao/auto-pairs'
+Plug 'bhurlow/vim-parinfer'
+
+" UI
+Plug 'Shougo/denite.nvim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+" Specific languages
+Plug 'sheerun/vim-polyglot'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'guns/vim-clojure-highlight'
 
 call plug#end()
 
-" Enable python
-let g:python3_host_prog='/usr/local/bin/python3'
-let g:python_host_prog='/usr/local/bin/python2'
+" =================================
+" ========== Vim Options ========== 
+" =================================
 
-set hidden                " Put buffer into background without saving first
-set hlsearch              " Highlight search terms
-set incsearch             " highlight terms dynamically as they are typed
-set number                " With relativenumber on, shows absolute line num on current line
-set relativenumber        " Turn on relative numbers
-set ruler                 " Line/col info at right-most region of status line
-set scrolloff=4           " Starts scrolling x lines before the end
-set shortmess=aOtTI       " Shorter interactive messages
-set showcmd               " Show partial commands in the lower-right corner
-set tags=tags;~/          " Look for file in the current directory until home
-set visualbell            " Turn annoying beeps into visual flash
-set wildmode=list:longest " Show tab completions like shell
+" Setup syntax highlighting and colour schemes
+syntax enable
+set background=dark " Dark mode
+colorscheme dracula
 
-" Set tab width to 4
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set number relativenumber " Setting both gives us hybrid numbers
+set colorcolumn=80 " Ruler at 80 col
 
-" Sets the backup dir to be at x
-set backupdir=~/tmp/.vimtmp,/tmp
-set directory=~/tmp/.vimtmp,/tmp
-set undodir=~/tmp/.vimtmp,/tmp
+" Setup python3
+let g:loaded_python_provider = 1 " No need for python2
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
-" Extended '%' matching so that it applies to 
-" more things like XML start/close tags and if/else
-runtime macros/matchit.vim
+set tabstop=4 " Tabs are 4 spaces
+set shiftwidth=4 " Indent is 4 spaces also
+set expandtab " Tab key inserts spaces
+set hidden
 
-set history=144 " Longer history
+" ============================================
+" ============ KEYBOARD SHORTCUTS ============ 
+" ============================================
 
-" '/' searches are only case-sensitive when it contains a capital letter.
-set ignorecase
-set smartcase
+" Set leader to space
+let mapleader = ','
 
-" Neovim-fixed solarized
-set termguicolors
-set background=dark
-colorscheme NeoSolarized
+" F9/F10 for prev/next buffer
+nmap <F9>  :bprev<CR>
+nmap <F10> :bnext<CR>
 
-filetype plugin indent on " Turn on filetype detection and indentation
-syntax on " Syntax highlighting
 
-" Smooth scrolling
-let g:comfortable_motion_friction=300
-let g:comfortable_motion_air_drag=4.0
+" ========================================
+" ============= DENITE SETUP =============
+" ========================================
 
-" Spacemacs-style keybindings
-let mapleader=" " " Set <Space> as the <leader>
-nmap <silent> <leader>thl :silent :noh<CR>
-nmap <leader>_r :so $MYVIMRC<CR>
-nmap <leader>b :buffers<CR>
+" === Denite shorcuts === "
+"   `         - Browser currently open buffers
+"   <leader>t - Browse list of files in current directory
+"   <leader>f - Search current directory for occurences of given term and
+"   close window if no results
+nmap `              :Denite buffer -split=floating <CR>
+nmap <leader>t      :Denite file/rec -split=floating <CR>
+nnoremap <leader>f  :<C-u>Denite grep:. -no-empty -mode=normal<CR>
+nnoremap <Leader>s  :Denite colorscheme -split=floating<CR>
 
-" Faster buffer and tab management
-nmap <C-D-n> :bp<CR>
-nmap <C-D-s> :bn<CR>
+" Use ripgrep instead of grep
+" .gitignore is respected by default
+call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
+call denite#custom#var('grep', 'command', ['rg'])
 
-" Some normal macOS commands
-nmap <D-s> :w<CR>
-nmap <D-a> :%y+<CR>
-nmap <D-w> :close<CR>
+" Custom options for ripgrep
+"   --vimgrep:  Show results with every match on it's own line
+"   --hidden:   Search hidden directories and files
+"   --heading:  Show the file name above clusters of matches from each file
+"   --S:        Search case insensitively if the pattern is all lowercase
+call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--heading', '-S'])
 
-" <C-e> and <C-y> scrolls x lines at a time
-nnoremap <C-e> 4<C-e>
-nnoremap <C-y> 4<C-y>
+" Recommended defaults for ripgrep via Denite docs
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
 
+" Remove date from buffer list
+call denite#custom#var('buffer', 'date_format', '')
+
+" Custom options for Denite
+"   auto_resize             - Auto resize the Denite window height automatically.
+"   prompt                  - Customize denite prompt
+"   direction               - Specify Denite window direction as directly below current pane
+"   winminheight            - Specify min height for Denite window
+"   highlight_mode_insert   - Specify h1-CursorLine in insert mode
+"   prompt_highlight        - Specify color of prompt
+"   highlight_matched_char  - Matched characters highlight
+"   highlight_matched_range - matched range highlight
+let s:denite_options = {'default' : {
+\ 'auto_resize': 1,
+\ 'prompt': 'λ:',
+\ 'direction': 'rightbelow',
+\ 'winminheight': '10',
+\ 'highlight_mode_insert': 'Visual',
+\ 'highlight_mode_normal': 'Visual',
+\ 'prompt_highlight': 'Function',
+\ 'highlight_matched_char': 'Function',
+\ 'highlight_matched_range': 'Normal'
+\ }}
