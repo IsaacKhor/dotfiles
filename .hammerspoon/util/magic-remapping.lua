@@ -12,10 +12,16 @@ function postKey(mods, key)
 end
 
 function mod.init()
-  hs.hotkey.bind('ctrl,cmd', 's', postKey('cmd,shift', ']'), 
-    nil, postKey('cmd,shift', ']'))
-  hs.hotkey.bind('ctrl,cmd', 'n', postKey('cmd,shift', '['), 
-    nil, postKey('cmd,shift', '['))
+  -- Syntax: bind(modifiers, key, message, pressedfn, releasedfn, repeatfn) 
+  hs.hotkey.bind('ctrl,cmd', 's', 
+    postKey('cmd,shift', ']'), nil, postKey('cmd,shift', ']'))
+  hs.hotkey.bind('ctrl,cmd', 'n', 
+    postKey('cmd,shift', '['), nil, postKey('cmd,shift', '['))
+
+  hs.hotkey.bind('', 'f9', 
+    postKey('cmd,shift', '['), nil, postKey('cmd,shift', '['))
+  hs.hotkey.bind('', 'f10', 
+    postKey('cmd,shift', ']'), nil, postKey('cmd,shift', ']'))
 
   hs.hotkey.bind('cmd', 'h', postKey('cmd,shift,alt,ctrl', 'f12'), 
     nil, postKey('cmd,shift,alt,ctrl', 'f12'))

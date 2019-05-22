@@ -5,13 +5,13 @@
 local mod = {}
 mod.config = {
 	-- Shortcut for all windows hint
-	allWinKey = { "⌘⌃", "d" },
+	allWinKey = { "", "f11" },
 	-- Shortcut for hint for active app only
-	activeAppKey = { "⌘⌃", "b" },
+	activeAppKey = { "⌘⌃", "d" },
 	-- Hints style
 	-- use 'vimperator' if you want the hint char to be the
 	-- first letter of the window title
-	style = "vimperator",
+	style = "default",
 }
 
 function mod.init()
