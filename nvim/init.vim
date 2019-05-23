@@ -6,14 +6,13 @@
 call plug#begin('~/.config/nvim/plugins')
 
 " This version doesn't work with vimr for some wierd reason
-Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'mhartington/oceanic-next'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'joshdick/onedark.vim'
 Plug 'sickill/vim-monokai'
+Plug 'morhetz/gruvbox'
 
 " Conveniences
 Plug 'tpope/vim-surround' " For surrounding stuff
+Plug 'tpope/vim-commentary'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'bhurlow/vim-parinfer'
@@ -22,7 +21,7 @@ Plug 'bhurlow/vim-parinfer'
 Plug 'Shougo/denite.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
 " Specific languages
 Plug 'sheerun/vim-polyglot'
@@ -40,7 +39,7 @@ call plug#end()
 " Setup syntax highlighting and colour schemes
 syntax enable
 set background=dark " Dark mode
-colorscheme dracula
+colorscheme gruvbox
 
 set number relativenumber " Setting both gives us hybrid numbers
 set colorcolumn=80 " Ruler at 80 col
@@ -48,7 +47,7 @@ set colorcolumn=80 " Ruler at 80 col
 " Setup python3
 let g:loaded_python_provider = 1 " No need for python2
 let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/bin/python3'
 
 set tabstop=4 " Tabs are 4 spaces
 set shiftwidth=4 " Indent is 4 spaces also
@@ -122,3 +121,12 @@ let s:denite_options = {'default' : {
 \ 'highlight_matched_char': 'Function',
 \ 'highlight_matched_range': 'Normal'
 \ }}
+
+" ===============================================
+" ========== LANGUAGE-SPECIFIC OPTIONS ==========
+" ===============================================
+
+augroup filetype_c
+    autocmd!
+    autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
+augroup END
