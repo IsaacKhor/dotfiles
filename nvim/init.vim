@@ -71,6 +71,14 @@ nmap <F10> :bnext<CR>
 " Because lazy
 nnoremap <Leader>w :write<CR>
 nnoremap <Leader>q :quit<CR>
+nnoremap <Leader>le <C-w>=
+
+" ==================================
+" ========== MISC PLUGINS ==========
+" ==================================
+
+" Toggle tagbar, then redistribute window space
+nnoremap <F8> :TagbarToggle<CR><C-w>=
 
 " ========================================
 " ============= DENITE SETUP =============
