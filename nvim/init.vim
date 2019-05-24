@@ -5,30 +5,33 @@
 " Plugins in their own directory
 call plug#begin('~/.config/nvim/plugins')
 
-" This version doesn't work with vimr for some wierd reason
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'sickill/vim-monokai'
-Plug 'morhetz/gruvbox'
-
-" Conveniences
-Plug 'tpope/vim-surround' " For surrounding stuff
+" Motions and conveniences
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'bhurlow/vim-parinfer'
 
+" Integrations
+" Plug 'tpope/vim-fugitive'
+
+" Cosmetic
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'sickill/vim-monokai'
+Plug 'morhetz/gruvbox'
+
 " UI
 Plug 'Shougo/denite.nvim'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'majutsushi/tagbar'
 
 " Specific languages
 Plug 'sheerun/vim-polyglot'
-Plug 'guns/vim-clojure-static'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-salve'
-Plug 'guns/vim-clojure-highlight'
+" Plug 'guns/vim-clojure-static'
+" Plug 'tpope/vim-fireplace'
+" Plug 'tpope/vim-salve'
+" Plug 'guns/vim-clojure-highlight'
 
 call plug#end()
 
@@ -58,13 +61,16 @@ set hidden
 " ============ KEYBOARD SHORTCUTS ============ 
 " ============================================
 
-" Set leader to space
+" Set leader to comma
 let mapleader = ','
 
 " F9/F10 for prev/next buffer
 nmap <F9>  :bprev<CR>
 nmap <F10> :bnext<CR>
 
+" Because lazy
+nnoremap <Leader>w :write<CR>
+nnoremap <Leader>q :quit<CR>
 
 " ========================================
 " ============= DENITE SETUP =============
@@ -129,4 +135,5 @@ let s:denite_options = {'default' : {
 augroup filetype_c
     autocmd!
     autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
+        \ commentstring=//\ %s
 augroup END
