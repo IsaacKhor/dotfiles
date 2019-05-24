@@ -61,8 +61,8 @@ set hidden
 " ============ KEYBOARD SHORTCUTS ============ 
 " ============================================
 
-" Set leader to comma
-let mapleader = ','
+" Set leader to space
+let mapleader = ' '
 
 " F9/F10 for prev/next buffer
 nmap <F9>  :bprev<CR>
