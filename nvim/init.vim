@@ -1,5 +1,5 @@
 " =============================
-" ========== Plugins ========== 
+" ========== Plugins ==========
 " =============================
 
 " Plugins in their own directory
@@ -12,9 +12,11 @@ Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'bhurlow/vim-parinfer'
 Plug 'junegunn/vim-easy-align'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Integrations
 " Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Cosmetic
 Plug 'kien/rainbow_parentheses.vim'
@@ -26,6 +28,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
 
 " Specific languages
 Plug 'sheerun/vim-polyglot'
@@ -37,12 +40,12 @@ Plug 'xolox/vim-easytags'
 " Plug 'guns/vim-clojure-highlight'
 
 " Misc
-Plug 'xolox/vim-misc'
+Plug 'xolox/vim-misc' " Dependency for vim-easytags
 
 call plug#end()
 
 " =================================
-" ========== Vim Options ========== 
+" ========== Vim Options ==========
 " =================================
 
 " Setup syntax highlighting and colour schemes
@@ -52,11 +55,12 @@ colorscheme gruvbox
 
 set number relativenumber " Setting both gives us hybrid numbers
 set colorcolumn=80        " Ruler at 80 col
+set cursorline            " Highlight current line
 
 " Setup python3
 let g:loaded_python_provider = 1 " No need for python2
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 set tabstop=4    " Tabs are 4 spaces
 set shiftwidth=4 " Indent is 4 spaces also
@@ -65,8 +69,17 @@ set hidden       " Don't unload buffer on abandonment
 set scrolloff=15 " Minimum lines to keep above and below cursor
 set nowrap       " Don't wrap lines
 
+set ignorecase   " Ignore case when searching
+set smartcase    " Case sensitive search only if search contains capitals
+
+set autoread     " Re-read file if changed on filesystem
+
+" Put backups in their own folder
+set backupdir=~/.local/share/nvim/backupdir
+set nobackup
+
 " ============================================
-" ============ KEYBOARD SHORTCUTS ============ 
+" ============ KEYBOARD SHORTCUTS ============
 " ============================================
 
 " Set leader to space
@@ -92,6 +105,15 @@ let g:tagbar_left=1
 " Alignment
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
+
+" =============================
+" ========== Airline ==========
+" =============================
+let g:airline_extensions = ['branch']
+let g:airline_skip_empty_sections = 1 " Don't draw separator for empty sections
+" Buffer names with same extensions can be omitted
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#hunks#enabled=0 " Don't show git changes
 
 " ========================================
 " ============= DENITE SETUP =============
@@ -152,6 +174,12 @@ let s:denite_options = {'default' : {
 " ===============================================
 " ========== LANGUAGE-SPECIFIC OPTIONS ==========
 " ===============================================
+
+augroup misc
+    autocmd!
+    " Don't wrap by default
+    autocmd BufAdd set nowrap
+augroup END
 
 augroup filetype_c
     autocmd!
