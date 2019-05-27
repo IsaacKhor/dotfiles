@@ -11,6 +11,7 @@ Plug 'tpope/vim-commentary'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'bhurlow/vim-parinfer'
+Plug 'junegunn/vim-easy-align'
 
 " Integrations
 " Plug 'tpope/vim-fugitive'
@@ -28,10 +29,15 @@ Plug 'majutsushi/tagbar'
 
 " Specific languages
 Plug 'sheerun/vim-polyglot'
+Plug 'elzr/vim-json'
+Plug 'xolox/vim-easytags'
 " Plug 'guns/vim-clojure-static'
 " Plug 'tpope/vim-fireplace'
 " Plug 'tpope/vim-salve'
 " Plug 'guns/vim-clojure-highlight'
+
+" Misc
+Plug 'xolox/vim-misc'
 
 call plug#end()
 
@@ -45,17 +51,19 @@ set background=dark " Dark mode
 colorscheme gruvbox
 
 set number relativenumber " Setting both gives us hybrid numbers
-set colorcolumn=80 " Ruler at 80 col
+set colorcolumn=80        " Ruler at 80 col
 
 " Setup python3
 let g:loaded_python_provider = 1 " No need for python2
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
-set tabstop=4 " Tabs are 4 spaces
+set tabstop=4    " Tabs are 4 spaces
 set shiftwidth=4 " Indent is 4 spaces also
-set expandtab " Tab key inserts spaces
-set hidden
+set expandtab    " Tab key inserts spaces
+set hidden       " Don't unload buffer on abandonment
+set scrolloff=15 " Minimum lines to keep above and below cursor
+set nowrap       " Don't wrap lines
 
 " ============================================
 " ============ KEYBOARD SHORTCUTS ============ 
@@ -64,13 +72,13 @@ set hidden
 " Set leader to space
 let mapleader = ' '
 
-" F9/F10 for prev/next buffer
-nmap <F9>  :bprev<CR>
-nmap <F10> :bnext<CR>
+" F9/F10 for prev/next tab
+nmap <F9>  gT
+nmap <F10> gt
 
 " Because lazy
 nnoremap <Leader>w :write<CR>
-nnoremap <Leader>q :quit<CR>
+nnoremap <Leader>e :quit<CR>
 nnoremap <Leader>le <C-w>=
 
 " ==================================
@@ -79,6 +87,11 @@ nnoremap <Leader>le <C-w>=
 
 " Toggle tagbar, then redistribute window space
 nnoremap <F8> :TagbarToggle<CR><C-w>=
+let g:tagbar_left=1
+
+" Alignment
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 " ========================================
 " ============= DENITE SETUP =============
@@ -88,11 +101,11 @@ nnoremap <F8> :TagbarToggle<CR><C-w>=
 "   `         - Browser currently open buffers
 "   <leader>t - Browse list of files in current directory
 "   <leader>f - Search current directory for occurences of given term and
-"   close window if no results
-nmap `              :Denite buffer -split=floating <CR>
-nmap <leader>t      :Denite file/rec -split=floating <CR>
-nnoremap <leader>f  :<C-u>Denite grep:. -no-empty -mode=normal<CR>
-nnoremap <Leader>s  :Denite colorscheme -split=floating<CR>
+"               close window if no results
+nnoremap `         :Denite buffer -split=floating <CR>
+nnoremap <leader>t :Denite file/rec -split=floating <CR>
+nnoremap <leader>f :Denite grep:. -no-empty -mode=normal<CR>
+nnoremap <Leader>s :Denite colorscheme -split=floating<CR>
 
 " Use ripgrep instead of grep
 " .gitignore is respected by default
