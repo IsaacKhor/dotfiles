@@ -1,0 +1,11 @@
+{
+  "languageserver": {
+    "clangd": {
+      "command": "/usr/bin/clangd-8",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".git/"],
+      "filetypes": ["c"]
+    }
+  }
+}
+
+// vim: set et ts=2 sw=2:
