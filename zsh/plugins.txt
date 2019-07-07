@@ -1,0 +1,11 @@
+# To install:
+# Add the plugin to this file (take note of ordering)
+# Run antibody bundle < .config/zsh/plugins.txt > .config/zsh/plugins.sh
+# Re-source zshrc (which will load the new shell script)
+
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/pip
+
+mafredri/zsh-async
+sindresorhus/pure
+zsh-users/zsh-syntax-highlighting
