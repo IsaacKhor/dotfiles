@@ -194,6 +194,13 @@ function! s:denite_my_settings() abort
                 \ denite#do_map('open_filter_buffer')
     nnoremap <silent><buffer><expr> <Space>
                 \ denite#do_map('toggle_select').'j'
+
+    nnoremap <silent><buffer><expr> v
+                \ denite#do_map('do_action', 'vsplit')
+    nnoremap <silent><buffer><expr> t
+                \ denite#do_map('do_action', 'tabopen')
+    nnoremap <silent><buffer><expr> s
+                \ denite#do_map('do_action', 'split')
 endfunction
 
 " === Denite shorcuts === "
@@ -203,7 +210,7 @@ endfunction
 "               close window if no results
 nnoremap `          :Denite buffer -split=floating <CR>
 nnoremap <leader>t  :Denite file/rec -split=floating -default-action=switch<CR>
-nnoremap <leader>/g :Denite grep:. -no-empty -mode=normal<CR>
+nnoremap <leader>/g :Denite grep:.<CR>
 nnoremap <leader>/c :Denite colorscheme -split=floating<CR>
 
 " Use ripgrep instead of grep
@@ -234,7 +241,7 @@ call denite#custom#option('default', 'prompt', 'λ:')
 call denite#custom#option('default', 'auto_resize', 1)
 
 " Open directly below current pane
-call denite#custom#option('default', 'direction', 'rightbelow')
+" call denite#custom#option('default', 'direction', 'rightbelow')
 
 " Minimum height
 call denite#custom#option('default', 'winminheight', 10)
