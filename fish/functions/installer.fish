@@ -1,1 +1,0 @@
-/Users/cclark/.config/fisherman/pure/installer.fish

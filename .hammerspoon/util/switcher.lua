@@ -1,7 +1,7 @@
 local mod = {}
 mod.config = {
-	nextKey = {"ctrl", "w"},
-	prevKey = {"ctrl", "v"},
+	nextKey = {"⌘⌃", "s"},
+	prevKey = {"⌘⌃", "n"},
 }
 
 local switcher = nil
@@ -24,8 +24,8 @@ function mod.init()
 	ui.selectedThumbnailSize = 384
 	ui.showSelectedTitle = false
 
-	hs.hotkey.bind(cfg.nextKey[1], cfg.nextKey[2], nextWindow, nil, nil)
-	hs.hotkey.bind(cfg.prevKey[1], cfg.prevKey[2], prevWindow, nil, nil)
+	bind(cfg.nextKey, nextWindow)
+	bind(cfg.prevKey, prevWindow)
 end
 
 return mod

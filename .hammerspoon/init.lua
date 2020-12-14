@@ -26,9 +26,8 @@ local plugins = {
 
   -- Utilities
   {"util.magic-remapping", {}},
-  {"util.cheatsheet", {}},
-  {"util.window-hints", {}},
-  -- {"util.expose", {}},
+  -- {"util.window-hints", {}},
+  {"util.switcher", {}},
 }
 
 local function loadPlugin(plugin, config)
@@ -100,5 +99,4 @@ end
 --
 
 loadPlugins(plugins)
-
 notify("Hammerspoon", "Config loaded successfully")

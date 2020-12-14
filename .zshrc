@@ -8,8 +8,8 @@ export KEYTIMEOUT=1 # 100ms transition to normal mode
 export FZF_DEFAULT_COMMAND='rg --files'
 
 # Corporate proxy
-export http_proxy=http://proxy-png.intel.com:911
-export https_proxy=http://proxy-png.intel.com:912
+#export http_proxy=http://proxy-png.intel.com:911
+#export https_proxy=http://proxy-png.intel.com:912
 
 # ===================================
 # ========== PLUGIN CONFIG ==========
