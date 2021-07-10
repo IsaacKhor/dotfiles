@@ -24,7 +24,7 @@ export VIRTUALENVWRAPPER_PYTHON=python3
 alias ll='ls -lh'
 alias la='ls -lah'
 
-source ~/code/dotfiles/zsh_plugins.sh
+source ~/code/dotfiles/zsh/zsh_plugins.sh
 eval "$(starship init zsh)"
 
 #source ~/.local/bin/virtualenvwrapper.sh
