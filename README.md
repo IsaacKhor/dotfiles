@@ -2,6 +2,8 @@
 
 Use at your own risk; I do not take responsibility when you computer catches on fire as a result of using this repo.
 
+Packages required: `zsh tmux vim starship`
+
 Contains:
 
 1. `.hammerspoon/` legacy stuff I'm keeping around

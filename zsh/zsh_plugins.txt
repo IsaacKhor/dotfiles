@@ -1,6 +1,2 @@
-# Pure theme
-mafredri/zsh-async
-sindresorhus/pure
-
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
