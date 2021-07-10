@@ -3,7 +3,7 @@ export PATH=~/bin:$PATH
 alias ll='ls -lh'
 alias la='ls -lah'
 
-source ~/.zsh_plugins.sh
+source ~/code/dotfiles/zsh_plugins.sh
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/clarence/.zshrc'
