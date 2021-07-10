@@ -16,7 +16,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 # Env variables and aliases
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/code/dotfiles/scripts:$PATH
 export EDITOR=vim
 export PATH=~/.local/bin:$PATH
 export VIRTUALENVWRAPPER_PYTHON=python3
