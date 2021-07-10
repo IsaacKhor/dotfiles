@@ -17,16 +17,15 @@ bindkey -e
 
 # Env variables and aliases
 export PATH=~/bin:$PATH
+export EDITOR=vim
+export PATH=~/.local/bin:$PATH
+export VIRTUALENVWRAPPER_PYTHON=python3
+
 alias ll='ls -lh'
 alias la='ls -lah'
 
 source ~/code/dotfiles/zsh_plugins.sh
-
 eval "$(starship init zsh)"
 
-export PATH=~/.local/bin:$PATH
-export VIRTUALENVWRAPPER_PYTHON=python3
+#source ~/.local/bin/virtualenvwrapper.sh
 
-source ~/.local/bin/virtualenvwrapper.sh
-
-export EDITOR=vim
