@@ -1,7 +1,3 @@
-source /home/clarence/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-mafredri-SLASH-zsh-async/async.plugin.zsh
-fpath+=( /home/clarence/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-mafredri-SLASH-zsh-async )
-source /home/clarence/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure/pure.plugin.zsh
-fpath+=( /home/clarence/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure )
 source /home/clarence/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 fpath+=( /home/clarence/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-syntax-highlighting )
 source /home/clarence/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-history-substring-search/zsh-history-substring-search.plugin.zsh

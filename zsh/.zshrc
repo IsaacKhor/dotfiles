@@ -21,8 +21,8 @@ export EDITOR=vim
 export PATH=~/.local/bin:$PATH
 export VIRTUALENVWRAPPER_PYTHON=python3
 
-alias ll='ls -lh'
-alias la='ls -lah'
+alias ll='ls -lh --color=always'
+alias la='ls -lah --color=always'
 
 source ~/code/dotfiles/zsh/zsh_plugins.sh
 eval "$(starship init zsh)"
