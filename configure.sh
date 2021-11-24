@@ -19,10 +19,10 @@ echo 'Remember to <C-b> + I to install tmux plugins'
 ln -sfFn ~/code/dotfiles/wgetrc ~/.wgetrc
 
 # git repos
-git clone https://github.com/IsaacKhor/worldbot.git
-git clone https://github.com/IsaacKhor/rsbots.git
 git clone https://github.com/IsaacKhor/athena.git
-git clone https://github.com/IsaacKhor/ukprstatic.git
-git clone https://github.com/IsaacKhor/zhongxin-source.git
 git clone https://github.com/IsaacKhor/blog-source.git
+git clone https://github.com/IsaacKhor/rsbots.git
 git clone https://github.com/IsaacKhor/scheme-c.git
+git clone https://github.com/IsaacKhor/ukprstatic.git
+git clone https://github.com/IsaacKhor/worldbot.git
+git clone https://github.com/IsaacKhor/zhongxin-source.git
