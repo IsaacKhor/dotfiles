@@ -1,6 +1,4 @@
 #TabsToolbar,
-#sidebar-header,
-#back-button,
-#forward-button {
+#sidebar-header {
   visibility: collapse !important;
 }
