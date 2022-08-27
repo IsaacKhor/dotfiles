@@ -54,5 +54,10 @@ source ~/code/dotfiles/zsh_plugins.sh
 
 eval "$(starship init zsh)"
 
+# Attach to tmux session if we're not in one over ssh
+#if [[ -n "$SSH_CLIENT" ]] || [[ -n "$SSH_TTY" ]]; then
+#    [[ -z "${TMUX}" ]] && tmux new-session -A -s default
+#fi
+
 #source ~/.local/bin/virtualenvwrapper.sh
 
