@@ -1,8 +1,9 @@
-.DS_Store
-*.elc
-*~
-*.gpg
-*#$
-.emacs.d/
-nvim/plugins/
-zsh/zsh_plugins.sh
+/*
+
+!/.config/
+!/bin/
+!/windows/
+
+!/.vimrc
+!/.wgetrc
+!/.zshrc
