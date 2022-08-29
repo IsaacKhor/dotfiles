@@ -12,8 +12,16 @@ setopt hist_ignore_space
 unsetopt beep # No beeping
 bindkey -e # Emacs/readline keybindings
 
-# Completions
+export PATH=~/bin:$PATH
+export EDITOR=vim
+export PATH=~/.local/bin:$PATH
+export VIRTUALENVWRAPPER_PYTHON=python3
 
+alias ll='ls -lh --color=always'
+alias la='ls -lah --color=always'
+alias dotfile='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Completions
 autoload -Uz compinit
 compinit
 
@@ -33,22 +41,15 @@ zstyle ':completion:*:manuals.*'  	insert-sections   true
 zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm -w -w"
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 
-# Misc options
+# Plugins
+source ~/bin/antigen.zsh
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen apply
 
-export PATH=~/bin:~/code/dotfiles/scripts:$PATH
-export EDITOR=vim
-export PATH=~/.local/bin:$PATH
-export VIRTUALENVWRAPPER_PYTHON=python3
-
-alias ll='ls -lh --color=always'
-alias la='ls -lah --color=always'
-
-# Use antibody as our plugin manager
-# To install a new plugin, put it in zsh_plugins.sh and then
-# run `antibody bundle < ~/code/dotfiles/zsh_plugins.txt > ~/code/dotfiles/zsh_plugins.sh`
-source "~/code/dotfiles/zsh_plugins.$(hostname).sh"
-
-eval "$(starship init zsh)"
+# Use starship prompt
+# eval "$(starship init zsh)"
 
 # Attach to tmux session if we're not in one over ssh
 #if [[ -n "$SSH_CLIENT" ]] || [[ -n "$SSH_TTY" ]]; then
