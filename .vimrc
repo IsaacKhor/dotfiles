@@ -31,5 +31,5 @@ set gdefault
 
 filetype plugin indent on
 
-set backupdir=~/tmp/vimbackup
-set directory=~/tmp/vimbackupf
+set backupdir=~/tmp/vim/
+set directory=~/tmp/vim/

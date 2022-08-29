@@ -25,5 +25,5 @@ curl -L git.io/antigen > ~/bin/antigen.zsh
 
 echo 'Configuring tmux'
 mkdir -p ~/.config/tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-~/.tmux/plugins/tpm/bin/install_plugins
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+~/.config/tmux/plugins/tpm/bin/install_plugins

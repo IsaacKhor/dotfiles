@@ -4,6 +4,7 @@
 /.config/tmux/plugins/
 !/bin/
 !/windows/
+!/tmp/
 
 !/.vimrc
 !/.wgetrc
