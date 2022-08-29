@@ -43,6 +43,9 @@ export VIRTUALENVWRAPPER_PYTHON=python3
 alias ll='ls -lh --color=always'
 alias la='ls -lah --color=always'
 
+# Use antibody as our plugin manager
+# To install a new plugin, put it in zsh_plugins.sh and then
+# run `antibody bundle < ~/code/dotfiles/zsh_plugins.txt > ~/code/dotfiles/zsh_plugins.sh`
 source ~/code/dotfiles/zsh_plugins.sh
 
 eval "$(starship init zsh)"
