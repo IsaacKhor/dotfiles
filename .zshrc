@@ -48,8 +48,8 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
-# Use starship prompt
-# eval "$(starship init zsh)"
+# Source host-specific config files
+source ~/.config/zsh/.zshrc.$(hostname -s)
 
 # Attach to tmux session if we're not in one over ssh
 #if [[ -n "$SSH_CLIENT" ]] || [[ -n "$SSH_TTY" ]]; then

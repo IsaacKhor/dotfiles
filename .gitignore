@@ -6,6 +6,9 @@
 !/windows/
 !/tmp/
 
+!/.ssh/config
+!/.ssh/id_northeastern.pub
+
 !/.vimrc
 !/.wgetrc
 !/.zshrc
