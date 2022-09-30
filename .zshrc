@@ -49,7 +49,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Source host-specific config files
-source ~/.config/zsh/.zshrc.$(hostname -s)
+if [[ -f ~/.config/zsh/.zshrc.$(hostname -s) ]]; then
+  source ~/.config/zsh/.zshrc.$(hostname -s)
+fi
 
 # Attach to tmux session if we're not in one over ssh
 #if [[ -n "$SSH_CLIENT" ]] || [[ -n "$SSH_TTY" ]]; then
