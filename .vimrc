@@ -3,6 +3,8 @@ set nocompatible
 
 colorscheme evening
 
+set ruler
+set wildmenu
 set autoread
 set encoding=utf-8
 set number
@@ -21,7 +23,14 @@ syntax enable
 set textwidth=80
 "set colorcolumn=80
 
+set scrolloff=15
+set display+=lastline
+set formatoptions+=j
 set diffopt+=iwhite
+
+set sessionoptions-=options
+set viewoptions-=options
+set backspace=indent,eol,start
 
 set hlsearch
 set incsearch
