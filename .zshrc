@@ -14,6 +14,7 @@ bindkey -e # Emacs/readline keybindings
 
 export PATH=~/bin:$PATH
 export EDITOR=vim
+export VISUAL=vim
 export PATH=~/.local/bin:$PATH
 export VIRTUALENVWRAPPER_PYTHON=python3
 
