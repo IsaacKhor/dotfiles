@@ -61,3 +61,11 @@ fi
 
 #source ~/.local/bin/virtualenvwrapper.sh
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+
+# opam configuration
+[[ ! -r /Users/isaackhor/.opam/opam-init/init.zsh ]] || source /Users/isaackhor/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
