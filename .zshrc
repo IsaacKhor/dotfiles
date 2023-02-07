@@ -5,17 +5,18 @@ setopt extendedglob
 setopt nomatch
 setopt notify
 setopt auto_cd
-setopt share_history
+#setopt share_history
 setopt extended_history
 setopt hist_ignore_dups
 setopt hist_ignore_space
+setopt interactivecomments
 unsetopt beep # No beeping
 bindkey -e # Emacs/readline keybindings
 
 export PATH=~/bin:$PATH
 export EDITOR=vim
 export VISUAL=vim
-export PATH=~/.local/bin:$PATH
+export PATH=~/.local/bin:~/.cargo/bin:$PATH
 export VIRTUALENVWRAPPER_PYTHON=python3
 
 alias ll='ls -lh --color=always'
@@ -67,5 +68,4 @@ fi
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
-# opam configuration
-[[ ! -r /Users/isaackhor/.opam/opam-init/init.zsh ]] || source /Users/isaackhor/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
