@@ -4,7 +4,7 @@
 /.config/tmux/plugins/
 !/bin/
 !/windows/
-!/tmp/
+/tmp/
 
 !/.ssh/config
 !/.ssh/id_northeastern.pub
@@ -12,3 +12,6 @@
 !/.vimrc
 !/.wgetrc
 !/.zshrc
+
+.DS_Store
+
