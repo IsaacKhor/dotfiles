@@ -4,6 +4,7 @@ starship init fish | source
 fish_add_path ~/.cargo/bin
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 
+alias ls="exa"
 alias ll="exa -lh"
 alias la="exa -lah"
 alias dotfile="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
