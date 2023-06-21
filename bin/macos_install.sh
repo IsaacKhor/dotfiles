@@ -18,6 +18,7 @@ lf
 ripgrep
 rustup-init
 starship
+tmux
 )
 
 brew_casks=(

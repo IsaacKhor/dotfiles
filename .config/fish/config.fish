@@ -1,8 +1,9 @@
-# Starship prompt
-starship init fish | source
-
 fish_add_path ~/.cargo/bin
 fish_add_path /home/linuxbrew/.linuxbrew/bin
+fish_add_path /opt/homebrew/bin
+
+# Starship prompt
+starship init fish | source
 
 alias ls="exa"
 alias ll="exa -lh"
