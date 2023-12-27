@@ -5,9 +5,9 @@ fish_add_path /opt/homebrew/bin
 # Starship prompt
 starship init fish | source
 
-alias ls="exa"
-alias ll="exa -lh"
-alias la="exa -lah"
+alias ls="eza"
+alias ll="eza -lh"
+alias la="eza -lah"
 alias dotfile="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # opam configuration
