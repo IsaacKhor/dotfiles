@@ -1,7 +1,9 @@
 fish_add_path ~/.cargo/bin
 
 # Starship prompt
-starship init fish | source
+if type -q starship
+	starship init fish | source
+end
 
 alias ls="eza"
 alias ll="eza -lh"
