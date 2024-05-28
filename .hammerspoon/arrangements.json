@@ -48,17 +48,6 @@
     }
   },
   "3 code" : {
-    "CA84666B-72AA-40D7-9FA8-A4CD70DB1177" : {
-      "apps" : {
-        "Code" : {
-          "y" : -376,
-          "w" : 1440,
-          "x" : 2560,
-          "h" : 2560
-        }
-      },
-      "Monitor Name" : "PA278CV"
-    },
     "D0A97268-E48F-431F-89C0-E9B5ED932E47" : {
       "apps" : {
         "Firefox" : {
@@ -70,11 +59,58 @@
         "iTerm2" : {
           "y" : 25,
           "w" : 1122,
-          "x" : -0,
+          "x" : 0,
           "h" : 1415
         }
       },
       "Monitor Name" : "HP M27fq QHD"
+    },
+    "CA84666B-72AA-40D7-9FA8-A4CD70DB1177" : {
+      "apps" : {
+        "Code" : {
+          "y" : -376,
+          "w" : 1440,
+          "x" : 2560,
+          "h" : 2560
+        }
+      },
+      "Monitor Name" : "PA278CV"
+    }
+  },
+  "3 code hor" : {
+    "5B431462-3E4E-4208-AE51-94958D3E3064" : {
+      "apps" : {
+        "Firefox" : {
+          "y" : 25,
+          "w" : 1405,
+          "x" : 1155,
+          "h" : 1413
+        },
+        "iTerm2" : {
+          "y" : 29,
+          "w" : 1130,
+          "x" : 24,
+          "h" : 1415
+        }
+      },
+      "Monitor Name" : "HP M27fq QHD (1)"
+    },
+    "F90FEE56-EAD0-42EF-8928-A4639C292AA1" : {
+      "apps" : {
+        "Code" : {
+          "y" : 0,
+          "w" : 2560,
+          "x" : 2560,
+          "h" : 1440
+        }
+      },
+      "Monitor Name" : "HP M27fq QHD (2)"
+    },
+    "37D8832A-2D66-02CA-B9F7-8F30A301B230" : {
+      "apps" : [
+
+      ],
+      "Monitor Name" : "Built-in Retina Display"
     }
   }
 }
