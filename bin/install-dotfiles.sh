@@ -16,6 +16,9 @@ if [ $? = 0 ]; then
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 fi;
 
-sudo apt -y install fish exa fzf
-sudo snap install --edge starship
+sudo apt -y install fish fzf build-essential cmake gpg
+
+# setup rust toolchain
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install eza starship
 
