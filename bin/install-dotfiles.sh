@@ -16,6 +16,8 @@ if [ $? = 0 ]; then
     git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 fi;
 
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote set-url origin git@github.com:IsaacKhor/dotfiles.git
+
 sudo apt -y install fish fzf build-essential cmake gpg
 
 # setup rust toolchain
