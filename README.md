@@ -9,4 +9,4 @@ sudo useradd ikhor
 sudo usermod -aG sudo ikhor
 ```
 
-Nopassword sudoers: `isaackhor ALL=NOPASSWD: ALL`
+Nopassword sudoers: `ikhor ALL=NOPASSWD: ALL`
