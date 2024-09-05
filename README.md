@@ -9,7 +9,7 @@ To set up the ssh agent, use: `ln -sfFn $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock`
 Create my user:
 
 ```
-sudo useradd ikhor
+sudo adduser ikhor
 sudo usermod -aG sudo ikhor
 ```
 
