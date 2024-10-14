@@ -28,7 +28,10 @@ fi
 
 if [ -e /home/isaackhor/.nix-profile/etc/profile.d/nix.sh ]; then . /home/isaackhor/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+# fix ssh agent if required
+
 if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
+  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
   tmux attach-session || tmux new-session -s ssh_tmux
 fi
 
