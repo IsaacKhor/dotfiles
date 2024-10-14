@@ -1,3 +1,7 @@
+if not status --is-interactive
+	exit
+end
+
 # Starship prompt
 if type -q starship
 	starship init fish | source
