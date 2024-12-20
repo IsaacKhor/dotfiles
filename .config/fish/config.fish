@@ -32,6 +32,11 @@ if type -q eza
 	alias la="eza -lah"
 end
 
+if test -e ~/.vcpkg
+	set -x VCPKG_ROOT ~/.vcpkg
+	fish_add_path -g ~/.vcpkg
+end
+
 # source machine local config if one exists
 if test -e ~/.config/fish/config.$hostname
 	source ~/.config/fish/config.$hostname
