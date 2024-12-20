@@ -10,12 +10,3 @@ curl -sS https://raw.githubusercontent.com/IsaacKhor/dotfiles/refs/heads/master/
 ```
 
 To set up the ssh agent, use: `ln -sfFn $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock`
-
-Create my user:
-
-```
-sudo adduser ikhor
-sudo usermod -aG sudo ikhor
-```
-
-Nopassword sudoers: `ikhor ALL=NOPASSWD: ALL`
