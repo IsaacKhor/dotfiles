@@ -6,3 +6,5 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINfJY1gvM6XCQ6qEqySxn/OxEuPrGXbTMofv20ac6RUi
 	name = Isaac Khor
 	email = s.github@isaackhor.com
+[init]
+	defaultBranch = master
