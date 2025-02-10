@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -xeuo pipefail
 
+sudo apt update
 sudo apt -y install fish fzf gpg
 
 # setup rust toolchain
