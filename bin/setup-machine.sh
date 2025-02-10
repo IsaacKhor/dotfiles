@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -xeuo pipefail
 
 if [ "$EUID" -ne 0 ]; then

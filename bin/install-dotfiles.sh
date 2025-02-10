@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-set -euo pipefail
+set -xeuo pipefail
 
 # Set up dotfiles
 git clone --bare https://github.com/IsaacKhor/dotfiles.git ~/.dotfiles
