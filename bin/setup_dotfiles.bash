@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-set -xeuo pipefail
+set -xuo pipefail
 
 git clone --bare https://github.com/IsaacKhor/dotfiles.git ~/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
 
 mkdir -p .config-backup
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout || true
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 if [ $? = 0 ]; then
   echo "Checked out config.";
   else
