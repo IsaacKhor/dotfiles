@@ -6,6 +6,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
+deluser --remove-home ikhor || true
 adduser --disabled-password --gecos '' ikhor
 usermod -aG sudo ikhor
 echo 'ikhor ALL=NOPASSWD: ALL' > /etc/sudoers.d/ikhor_nopasswd
