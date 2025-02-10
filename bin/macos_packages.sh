@@ -7,7 +7,6 @@ fi
 
 brew_formulae=(
 bat
-coreutils
 duf
 dust
 exa
@@ -23,18 +22,14 @@ tmux
 
 brew_casks=(
 1password
-1password-cli
 alfred
 battery
-dash
 font-roboto-mono
 google-chrome
 hiddenbar
 iterm2
 karabiner-elements
 little-snitch
-mactex
-micro-snitch
 shottr
 sublime-text
 texifier

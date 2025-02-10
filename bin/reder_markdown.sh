@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ $# -ne 3 ]; then
-    echo "Usage: ./render-markdown.sh <path/to/md.md> <path/to/output.html <title>"
+    echo "Usage: ./render_markdown.sh <path/to/md.md> <path/to/output.html <title>"
     exit 0
 fi
 
