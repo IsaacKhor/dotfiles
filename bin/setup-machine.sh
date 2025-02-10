@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -xeuo pipefail
+
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
     exit
