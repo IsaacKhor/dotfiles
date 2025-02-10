@@ -6,7 +6,7 @@ git clone --bare https://github.com/IsaacKhor/dotfiles.git ~/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
 
 mkdir -p .config-backup
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout || true
 if [ $? = 0 ]; then
   echo "Checked out config.";
   else
