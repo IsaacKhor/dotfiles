@@ -17,3 +17,6 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 
+# docker
+sudo apt install -y docker.io docker-buildx docker-compose
+sudo usermod -aG docker $USER
