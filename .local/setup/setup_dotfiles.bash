@@ -15,3 +15,4 @@ if [ $? = 0 ]; then
 fi;
 
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote set-url origin git@github.com:IsaacKhor/dotfiles.git
+chmod 600 ~/.ssh/*
