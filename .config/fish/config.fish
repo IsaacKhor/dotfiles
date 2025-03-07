@@ -24,6 +24,12 @@ if test -e ~/.cargo
 	fish_add_path -g ~/.cargo/bin
 end
 
+if test -e ~/.atuin
+	fish_add_path -g ~/.atuin/bin
+	atuin init fish --disable-up-arrow | source
+	#bind \cr _atuin_search
+end
+
 if type -q starship
 	starship init fish | source
 end
