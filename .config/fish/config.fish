@@ -24,6 +24,10 @@ if test -e ~/.cargo
 	fish_add_path -g ~/.cargo/bin
 end
 
+if type -q fzf
+	fzf_key_bindings
+end
+
 if test -e ~/.atuin
 	fish_add_path -g ~/.atuin/bin
 	atuin init fish --disable-up-arrow | source
