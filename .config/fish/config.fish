@@ -36,6 +36,7 @@ end
 
 if test -e ~/perl5
 	fish_add_path -g ~/perl5/bin
+	eval (perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 end
 
 if type -q starship
