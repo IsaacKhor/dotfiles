@@ -34,6 +34,10 @@ if test -e ~/.atuin
 	#bind \cr _atuin_search
 end
 
+if test -e ~/perl5
+	fish_add_path -g ~/perl5/bin
+end
+
 if type -q starship
 	starship init fish | source
 end
