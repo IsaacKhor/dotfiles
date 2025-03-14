@@ -9,7 +9,7 @@ end
 
 alias dotfile="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
-fish_add_path ~/bin
+fish_add_path -g ~/bin
 
 # opam configuration
 if test -e $HOME/.opam/opam-init/init.fish
@@ -30,7 +30,7 @@ end
 
 if test -e ~/.atuin
 	fish_add_path -g ~/.atuin/bin
-	atuin init fish --disable-up-arrow | source
+	atuin init fish | source
 	#bind \cr _atuin_search
 end
 
