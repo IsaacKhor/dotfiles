@@ -1,0 +1,55 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "lsp": {
+    "clangd": {
+      "command": ["clangd"],
+      "enabled": true
+    }
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
+    },
+    "version": "2"
+  },
+  "ssh_connections": [
+    {
+      "host": "klein",
+      "projects": [
+        {
+          "paths": ["~/code/lsvd"]
+        }
+      ]
+    },
+    {
+      "host": "lsvd_n4",
+      "projects": [
+        {
+          "paths": ["~/lsvd-research"]
+        }
+      ]
+    }
+  ],
+  "vim_mode": true,
+  "ui_font_size": 16,
+  // "ui_font_family": "Source Code Pro for Powerline",
+  "buffer_font_family": "Source Code Pro for Powerline",
+  "buffer_font_size": 14,
+  "buffer_line_height": { "custom": 1.35 },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  }
+}
