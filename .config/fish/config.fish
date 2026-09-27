@@ -59,3 +59,7 @@ if test -e ~/.config/fish/config.$hostname
 	source ~/.config/fish/config.$hostname
 end
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

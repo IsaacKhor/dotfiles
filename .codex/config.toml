@@ -1,0 +1,54 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "xhigh"
+service_tier = "default"
+approvals_reviewer = "auto_review"
+#approvals_reviewer = "guardian_subagent"
+model_provider = "cliproxyapi"
+personality = "pragmatic"
+
+notice.hide_rate_limit_model_nudge = true
+agents.max_concurrent_threads_per_session = 18
+
+[tui]
+screen_reader_detection_done = true
+
+[tui.keymap]
+composer.submit = "alt-enter"
+editor.insert_newline = "enter"
+
+[tui.model_availability_nux]
+gpt-6-astra = 4
+
+[projects."/home/ikhor/code"]
+trust_level = "trusted"
+
+[projects."/mnt/ssd-pool/traces"]
+trust_level = "trusted"
+
+[projects."/home/ikhor/code/trace_char"]
+trust_level = "trusted"
+
+[projects."/home/ikhor/code/cfcache"]
+trust_level = "trusted"
+
+[projects."/home/ikhor/code/trace_characterisation"]
+trust_level = "trusted"
+
+[projects."/home/ikhor/code/costco_gold"]
+trust_level = "trusted"
+
+[projects."/home/ikhor/code/cfcache/paper"]
+trust_level = "trusted"
+
+[projects."/home/ikhor/code/noadcast"]
+trust_level = "trusted"
+
+[projects."/home/ikhor"]
+trust_level = "trusted"
+
+[model_providers.cliproxyapi]
+name = "openai"
+base_url = "http://laurel:44005/v1"
+wire_api = "responses"
+requires_openai_auth = false
+
