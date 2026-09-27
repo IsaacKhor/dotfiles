@@ -10,6 +10,7 @@ end
 alias dotfile="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 fish_add_path -g ~/bin
+fish_add_path -g ~/.local/bin
 
 # opam configuration
 if test -e $HOME/.opam/opam-init/init.fish
